@@ -1,4 +1,4 @@
-# ![](http://cloud-rain.com/web/images/crtc_logo_tutor_t.gif)cr-tutor
+# ![](http://cloud-rain.com/web/crtc_logo_tutor2_t.gif)cr-tutor
 cr-Tutor is a distributed network based tool for assisting tutors in teaching and communicating. It can be used in face to face tutorial, remote tutorial, and remote control.
 
 # Download
