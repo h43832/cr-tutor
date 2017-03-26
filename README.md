@@ -5,5 +5,5 @@ cr-Tutor is a distributed network based tool for assisting tutors in teaching an
   <a href="https://drive.google.com/folderview?id=0B__KtdLXDfLKeXFDWVh1MWZRM28&usp=sharing" targer="_blank">click here to download</a>
   
 # Groups
-<a href="https://groups.google.com/d/forum/cr-tutor" target="_blank">cr-wsn discussion forum</a>
+<a href="https://groups.google.com/d/forum/cr-tutor" target="_blank">cr-tutor discussion forum</a>
 
