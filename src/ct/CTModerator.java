@@ -47,7 +47,7 @@ import y.ylib.ZDIS;
 import y.ylib.ylib;
 
 public class CTModerator extends javax.swing.JFrame implements Runnable,GAction{
-  static public String version="2.17.0011",newversion=version,versionDate="2017-03-26 14:39:00";
+  static public String version="2.17.0012",newversion=version,versionDate="2017-03-27 21:00:00";
   public Weber w;
   public Net gs;
   public String allNodesName="",myNodeName="",logFileHead="log\\logCrTutor-";

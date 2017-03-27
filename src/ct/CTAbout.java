@@ -21,7 +21,7 @@ public class CTAbout extends javax.swing.JFrame  implements HyperlinkListener {
         setSize(w2,h2);
         setTitle(bundle2.getString("CTAbout.xy.msg1")+" V. "+ctm.version);
 
-        if(!ctm.tutorMode) jTabbedPane1.remove(jPanel2);
+        jTabbedPane1.remove(jPanel2);
 
         setLocation((width-w2)/2,(h-h2)/2);
 
@@ -40,81 +40,81 @@ public class CTAbout extends javax.swing.JFrame  implements HyperlinkListener {
    */
   @SuppressWarnings("unchecked")
 
-    private void initComponents() {
+  private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jEditorPane1 = new javax.swing.JEditorPane();
-        jPanel2 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jEditorPane2 = new javax.swing.JEditorPane();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+    jTabbedPane1 = new javax.swing.JTabbedPane();
+    jPanel1 = new javax.swing.JPanel();
+    jScrollPane1 = new javax.swing.JScrollPane();
+    jEditorPane1 = new javax.swing.JEditorPane();
+    jPanel2 = new javax.swing.JPanel();
+    jScrollPane2 = new javax.swing.JScrollPane();
+    jEditorPane2 = new javax.swing.JEditorPane();
+    jPanel3 = new javax.swing.JPanel();
+    jPanel4 = new javax.swing.JPanel();
+    jPanel5 = new javax.swing.JPanel();
+    jButton1 = new javax.swing.JButton();
+    jButton3 = new javax.swing.JButton();
+    jButton2 = new javax.swing.JButton();
 
-        setTitle(null);
+    setTitle("null");
 
-        jPanel1.setLayout(new java.awt.BorderLayout());
+    jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jScrollPane1.setViewportView(jEditorPane1);
+    jScrollPane1.setViewportView(jEditorPane1);
 
-        jPanel1.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+    jPanel1.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("ct/Bundle"); 
-        jTabbedPane1.addTab(bundle.getString("CTAbout.jPanel1.TabConstraints.tabTitle"), jPanel1); 
+    java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("ct/Bundle"); 
+    jTabbedPane1.addTab(bundle.getString("CTAbout.jPanel1.TabConstraints.tabTitle"), jPanel1); 
 
-        jPanel2.setLayout(new java.awt.BorderLayout());
+    jPanel2.setLayout(new java.awt.BorderLayout());
 
-        jScrollPane2.setViewportView(jEditorPane2);
+    jScrollPane2.setViewportView(jEditorPane2);
 
-        jPanel2.add(jScrollPane2, java.awt.BorderLayout.CENTER);
+    jPanel2.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
-        jPanel3.setLayout(new java.awt.GridLayout(2, 1));
-        jPanel3.add(jPanel4);
+    jPanel3.setLayout(new java.awt.GridLayout(2, 1));
+    jPanel3.add(jPanel4);
 
-        jPanel5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+    jPanel5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
-        jButton1.setFont(jButton1.getFont().deriveFont(jButton1.getFont().getSize()+6f));
-        jButton1.setText(bundle.getString("CTAbout.jButton1.text")); 
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel5.add(jButton1);
+    jButton1.setFont(jButton1.getFont().deriveFont(jButton1.getFont().getSize()+6f));
+    jButton1.setText(bundle.getString("CTAbout.jButton1.text")); 
+    jButton1.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButton1ActionPerformed(evt);
+      }
+    });
+    jPanel5.add(jButton1);
 
-        jButton3.setFont(jButton3.getFont().deriveFont(jButton3.getFont().getSize()+6f));
-        jButton3.setText(bundle.getString("CTAbout.jButton3.text")); 
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel5.add(jButton3);
+    jButton3.setFont(jButton3.getFont().deriveFont(jButton3.getFont().getSize()+6f));
+    jButton3.setText(bundle.getString("CTAbout.jButton3.text")); 
+    jButton3.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButton3ActionPerformed(evt);
+      }
+    });
+    jPanel5.add(jButton3);
 
-        jButton2.setFont(jButton2.getFont().deriveFont(jButton2.getFont().getSize()+6f));
-        jButton2.setText(bundle.getString("CTAbout.jButton2.text")); 
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel5.add(jButton2);
+    jButton2.setFont(jButton2.getFont().deriveFont(jButton2.getFont().getSize()+6f));
+    jButton2.setText(bundle.getString("CTAbout.jButton2.text")); 
+    jButton2.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButton2ActionPerformed(evt);
+      }
+    });
+    jPanel5.add(jButton2);
 
-        jPanel3.add(jPanel5);
+    jPanel3.add(jPanel5);
 
-        jPanel2.add(jPanel3, java.awt.BorderLayout.PAGE_END);
+    jPanel2.add(jPanel3, java.awt.BorderLayout.PAGE_END);
 
-        jTabbedPane1.addTab(bundle.getString("CTAbout.jPanel2.TabConstraints.tabTitle"), jPanel2); 
+    jTabbedPane1.addTab(bundle.getString("CTAbout.jPanel2.TabConstraints.tabTitle"), jPanel2); 
 
-        getContentPane().add(jTabbedPane1, java.awt.BorderLayout.CENTER);
+    getContentPane().add(jTabbedPane1, java.awt.BorderLayout.CENTER);
 
-        pack();
-    }
+    pack();
+  }
 
 private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
   setVisible(false);
@@ -157,18 +157,18 @@ public void setPage2(String page){
    }catch(IOException e){e.printStackTrace();}
 }
 
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JEditorPane jEditorPane1;
-    private javax.swing.JEditorPane jEditorPane2;
-    private javax.swing.JPanel jPanel1;
-    public javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    public javax.swing.JTabbedPane jTabbedPane1;
+  private javax.swing.JButton jButton1;
+  private javax.swing.JButton jButton2;
+  private javax.swing.JButton jButton3;
+  private javax.swing.JEditorPane jEditorPane1;
+  private javax.swing.JEditorPane jEditorPane2;
+  private javax.swing.JPanel jPanel1;
+  public javax.swing.JPanel jPanel2;
+  private javax.swing.JPanel jPanel3;
+  private javax.swing.JPanel jPanel4;
+  private javax.swing.JPanel jPanel5;
+  private javax.swing.JScrollPane jScrollPane1;
+  private javax.swing.JScrollPane jScrollPane2;
+  public javax.swing.JTabbedPane jTabbedPane1;
 
 }
