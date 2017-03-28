@@ -47,7 +47,7 @@ import y.ylib.ZDIS;
 import y.ylib.ylib;
 
 public class CTModerator extends javax.swing.JFrame implements Runnable,GAction{
-  static public String version="2.17.0012",newversion=version,versionDate="2017-03-27 21:00:00";
+  static public String version="2.17.0013",newversion=version,versionDate="2017-03-28 08:00:00";
   public Weber w;
   public Net gs;
   public String allNodesName="",myNodeName="",logFileHead="log\\logCrTutor-";
@@ -63,7 +63,7 @@ public class CTModerator extends javax.swing.JFrame implements Runnable,GAction{
   com.sun.media.jai.codec.JPEGEncodeParam param=null;
 
  boolean runThread=false,isAlive=false,isSleep=false,reload=false,tutorMode=false,
-             presentationMode=false,existSaveFile=false;
+             presentationMode=false,existSaveFile=false,needRegister=false;
  SimpleDateFormat format1 = new SimpleDateFormat ("yyyy/MM/dd HH:mm"),format2=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"),
          format3=new SimpleDateFormat("HH:mm"),format4=new SimpleDateFormat("yyyyMMddHHmmss"),format5 = new SimpleDateFormat("HH:mm:ss");
 
@@ -1534,6 +1534,10 @@ public void f_upload(TreeMap uploadTM){
 
       w.setAHVar("moderatorId",w.getGNS(1));
 
+      if(!needRegister){
+        jMenuItem4.setVisible(false);
+        jMenuItem10.setVisible(false);
+      }
     } else {
       jLabel36.setVisible(false);
       cbb_moderatorStatusList.setVisible(false);
@@ -1560,7 +1564,7 @@ public void f_upload(TreeMap uploadTM){
 
     t=new Thread(this);
     t.start();
-    if(p_chkShowAbout()) {
+    if(p_chkShowAbout() && needRegister) {
       p_about.setVisible(true);
       if(p_statuses[6].length()<1) p_statuses[6]=format4.format(new Date());
       p_statuses[7]=format4.format(new Date());
@@ -5944,6 +5948,7 @@ private void saveModeratorProps(){
     jMenu3 = new javax.swing.JMenu();
     jMenuItem8 = new javax.swing.JMenuItem();
     jMenuItem7 = new javax.swing.JMenuItem();
+    jMenuItem17 = new javax.swing.JMenuItem();
     jMenuItem6 = new javax.swing.JMenuItem();
     jMenuItem4 = new javax.swing.JMenuItem();
     jMenuItem10 = new javax.swing.JMenuItem();
@@ -7959,6 +7964,14 @@ private void saveModeratorProps(){
     });
     jMenu3.add(jMenuItem7);
 
+    jMenuItem17.setText(bundle.getString("CTModerator.jMenuItem17.text")); 
+    jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jMenuItem17ActionPerformed(evt);
+      }
+    });
+    jMenu3.add(jMenuItem17);
+
     jMenuItem6.setText(bundle.getString("CTModerator.jMenuItem6.text")); 
     jMenu3.add(jMenuItem6);
 
@@ -8848,7 +8861,7 @@ private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {
 
 private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {
   if(!p_about.isVisible()) p_about.setVisible(true);
-  if(p_rc.length()>0){
+  if(p_rc.length()>0 || !needRegister){
     p_about.jTabbedPane1.remove(p_about.jPanel2);
   }
 }
@@ -10206,6 +10219,10 @@ else if(!jCheckBox17.isSelected() && !jCheckBox18.isSelected())  {jCheckBox22.se
     }
   }
 
+  private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {
+     openURL.open("https://github.com/h43832/cr-tutor");
+  }
+
   public void saveImg(Image image,String filename){
      try {
 
@@ -10464,6 +10481,7 @@ else if(!jCheckBox17.isSelected() && !jCheckBox18.isSelected())  {jCheckBox22.se
   private javax.swing.JMenuItem jMenuItem14;
   private javax.swing.JMenuItem jMenuItem15;
   private javax.swing.JMenuItem jMenuItem16;
+  private javax.swing.JMenuItem jMenuItem17;
   private javax.swing.JMenuItem jMenuItem2;
   private javax.swing.JMenuItem jMenuItem3;
   private javax.swing.JMenuItem jMenuItem4;

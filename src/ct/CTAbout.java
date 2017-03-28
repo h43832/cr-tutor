@@ -21,7 +21,7 @@ public class CTAbout extends javax.swing.JFrame  implements HyperlinkListener {
         setSize(w2,h2);
         setTitle(bundle2.getString("CTAbout.xy.msg1")+" V. "+ctm.version);
 
-        jTabbedPane1.remove(jPanel2);
+        if(!ctm.tutorMode || !ctm.needRegister) jTabbedPane1.remove(jPanel2);
 
         setLocation((width-w2)/2,(h-h2)/2);
 
