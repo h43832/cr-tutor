@@ -24,7 +24,7 @@ public class CTFBRename extends javax.swing.JDialog {
         int width=Toolkit.getDefaultToolkit().getScreenSize().width;
         int h=Toolkit.getDefaultToolkit().getScreenSize().height-20;
 
-        int w2=635;
+        int w2=800;
         int h2=80;
 
         setSize(w2,h2);

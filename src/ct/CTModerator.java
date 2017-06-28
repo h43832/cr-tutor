@@ -47,7 +47,7 @@ import y.ylib.ZDIS;
 import y.ylib.ylib;
 
 public class CTModerator extends javax.swing.JFrame implements Runnable,GAction{
-  static public String version="2.17.0013",newversion=version,versionDate="2017-03-28 08:00:00";
+  static public String version="2.17.0015",newversion=version,versionDate="2017-06-20 16:00:00";
   public Weber w;
   public Net gs;
   public String allNodesName="",myNodeName="",logFileHead="log\\logCrTutor-";
@@ -564,7 +564,7 @@ public void init(){
 
 }
 private void f_sortLocalTable(int col){
-  System.out.println("begin of f_sortLocalTable(int col)");
+
   if(col!=currentTbl1SortIndex) {currentTbl1SortIndex=col; currentTbl1SortAsc=true;}
   else currentTbl1SortAsc=(!currentTbl1SortAsc);
   int rcount=f_table1.getModel().getRowCount();
@@ -582,7 +582,7 @@ private void f_sortLocalTable(int col){
        }
      }
   }
-  System.out.println("end of f_sortLocalTable(int col)");
+
 }
 String [][] f_sortStrArr(String array[][],int col, boolean asc){
         String small;
@@ -4898,8 +4898,9 @@ public void f_appendFileOKLog(String str){
    } else  jTextArea1.append(str);
 }
 public synchronized void f_appendFileWaitLog(String text){
-  jTextPane1.setText(text);
 
+  jTextPane1Text=text;
+  f_appendFileWaitLog();
 }
 public synchronized void f_appendFileWaitLog(){
         Runnable  runnable = new Runnable() {
@@ -5628,2386 +5629,2386 @@ private void saveModeratorProps(){
    */
   @SuppressWarnings("unchecked")
 
-  private void initComponents() {
-
-    buttonGroup1 = new javax.swing.ButtonGroup();
-    buttonGroup6 = new javax.swing.ButtonGroup();
-    buttonGroup7 = new javax.swing.ButtonGroup();
-    buttonGroup2 = new javax.swing.ButtonGroup();
-    buttonGroup3 = new javax.swing.ButtonGroup();
-    buttonGroup8 = new javax.swing.ButtonGroup();
-    jTabbedPane1 = new javax.swing.JTabbedPane();
-    slidePanel = new javax.swing.JPanel();
-    sld_upperPanel1 = new javax.swing.JPanel();
-    sld_upperPanel2 = new javax.swing.JPanel();
-    jButton39 = new javax.swing.JButton();
-    btn_openSld = new javax.swing.JButton();
-    cbb_slide = new javax.swing.JComboBox();
-    jLabel12 = new javax.swing.JLabel();
-    jLabel9 = new javax.swing.JLabel();
-    cbb_sldMList = new javax.swing.JComboBox();
-    jPanel52 = new javax.swing.JPanel();
-    jLabel13 = new javax.swing.JLabel();
-    cbb_slideInx = new javax.swing.JComboBox();
-    jLabel20 = new javax.swing.JLabel();
-    jButton38 = new javax.swing.JButton();
-    jButton2 = new javax.swing.JButton();
-    jButton5 = new javax.swing.JButton();
-    msgPanel = new javax.swing.JPanel();
-    msg_TabbedPane = new javax.swing.JTabbedPane();
-    msg_panel1 = new javax.swing.JPanel();
-    msg_scrollPane = new javax.swing.JScrollPane();
-    msg_textPane = new javax.swing.JTextPane(msg_styleDoc);
-    msg_upperPanel = new javax.swing.JPanel();
-    msg_btnSaveAs = new javax.swing.JButton();
-    msg_btnClear = new javax.swing.JButton();
-    msg_btnPlus = new javax.swing.JButton();
-    msg_btnMinus = new javax.swing.JButton();
-    jLabel31 = new javax.swing.JLabel();
-    Color[] colors={Color.white,Color.red,Color.blue,Color.green,Color.BLACK,Color.CYAN,Color.DARK_GRAY,Color.LIGHT_GRAY,Color.MAGENTA,Color.ORANGE,Color.PINK,Color.YELLOW};
-    jComboBox2 = new javax.swing.JComboBox();
-    msg_checkBox1 = new javax.swing.JCheckBox();
-    msg_panel2 = new javax.swing.JPanel();
-    msg_scrollPane2 = new javax.swing.JScrollPane();
-    msg_textArea1 = new javax.swing.JTextArea();
-    msg_draft_upperPanel = new javax.swing.JPanel();
-    msg_button10 = new javax.swing.JButton();
-    msg_button9 = new javax.swing.JButton();
-    msg_button8 = new javax.swing.JButton();
-    msg_button7 = new javax.swing.JButton();
-    msg_lowerPanel = new javax.swing.JPanel();
-    jPanel51 = new javax.swing.JPanel();
-    msg_textField1 = new javax.swing.JTextField();
-    msg_panel7 = new javax.swing.JPanel();
-    msg_label1 = new javax.swing.JLabel();
-    jPanel53 = new javax.swing.JPanel();
-    msg_panel5 = new javax.swing.JPanel();
-    jCheckBox14 = new javax.swing.JCheckBox();
-    jCheckBox13 = new javax.swing.JCheckBox();
-    jLabel27 = new javax.swing.JLabel();
-    Color[] colors2={Color.white,Color.red,Color.blue,Color.green,Color.BLACK,Color.CYAN,Color.DARK_GRAY,Color.LIGHT_GRAY,Color.MAGENTA,Color.ORANGE,Color.PINK,Color.YELLOW};
-    jComboBox7 = new javax.swing.JComboBox();
-    msg_btn_sendMsg = new javax.swing.JButton();
-    msg_btnSendDraft = new javax.swing.JButton();
-    msg_btnSendClear = new javax.swing.JButton();
-    msg_label2 = new javax.swing.JLabel();
-    cbb_msgMList = new javax.swing.JComboBox();
-    screenPanel = new javax.swing.JPanel();
-    srn_upperPanel = new javax.swing.JPanel();
-    jLabel2 = new javax.swing.JLabel();
-    cbb_srnMList = new javax.swing.JComboBox();
-    btn_srnStart = new javax.swing.JButton();
-    rb_srnMonitor = new javax.swing.JRadioButton();
-    rb_srnControlAndImage = new javax.swing.JRadioButton();
-    btn_srnRefresh = new javax.swing.JButton();
-    btn_srnACD = new javax.swing.JButton();
-    jButton11 = new javax.swing.JButton();
-    cb_srnFix = new javax.swing.JCheckBox();
-    srn_scrollPane1 = new javax.swing.JScrollPane();
-    filePanel = new javax.swing.JPanel();
-    f_panel1 = new javax.swing.JPanel();
-    f_panel6 = new javax.swing.JPanel();
-    f_panel20 = new javax.swing.JPanel();
-    btn_fResetLayout1 = new javax.swing.JButton();
-    btn_fRoot1 = new javax.swing.JButton();
-    f_checkBox1 = new javax.swing.JCheckBox();
-    f_panel21 = new javax.swing.JPanel();
-    f_label1 = new javax.swing.JLabel();
-    cbb_fList1 = new javax.swing.JComboBox();
-    f_panel7 = new javax.swing.JPanel();
-    f_panel2 = new javax.swing.JPanel();
-    jPanel29 = new javax.swing.JPanel();
-    f_panel22 = new javax.swing.JPanel();
-    btn_fResetLayout2 = new javax.swing.JButton();
-    btn_fRoot2 = new javax.swing.JButton();
-    f_panel23 = new javax.swing.JPanel();
-    f_label2 = new javax.swing.JLabel();
-    cbb_fMlist = new javax.swing.JComboBox();
-    cbb_fList2 = new javax.swing.JComboBox();
-    jPanel31 = new javax.swing.JPanel();
-    f_panel3 = new javax.swing.JPanel();
-    f_scrollPane6 = new javax.swing.JScrollPane();
-    f_table1 = new javax.swing.JTable();
-    f_panel4 = new javax.swing.JPanel();
-    f_scrollPane7 = new javax.swing.JScrollPane();
-    f_table2 = new javax.swing.JTable();
-    f_panel5 = new javax.swing.JPanel();
-    f_tabbedPane1 = new javax.swing.JTabbedPane();
-    f_panel18 = new javax.swing.JPanel();
-    jScrollPane4 = new javax.swing.JScrollPane();
-    jTextPane1 = new javax.swing.JTextPane();
-    jPanel6 = new javax.swing.JPanel();
-    jScrollPane3 = new javax.swing.JScrollPane();
-    jTextArea3 = new javax.swing.JTextArea();
-    jPanel33 = new javax.swing.JPanel();
-    jScrollPane1 = new javax.swing.JScrollPane();
-    jTextArea1 = new javax.swing.JTextArea();
-    f_panel10 = new javax.swing.JPanel();
-    f_panel11 = new javax.swing.JPanel();
-    f_panel12 = new javax.swing.JPanel();
-    f_panel13 = new javax.swing.JPanel();
-    sketchPanel = new javax.swing.JPanel();
-    sk_upperPanel = new javax.swing.JPanel();
-    jPanel55 = new javax.swing.JPanel();
-    jButton4 = new javax.swing.JButton();
-    jLabel37 = new javax.swing.JLabel();
-    Color[] colors4={Color.white,Color.red,Color.blue,Color.green,Color.BLACK,Color.CYAN,Color.DARK_GRAY,Color.LIGHT_GRAY,Color.MAGENTA,Color.ORANGE,Color.PINK,Color.YELLOW};
-    jComboBox3 = new javax.swing.JComboBox();
-    jLabel16 = new javax.swing.JLabel();
-    Color[] colors3={Color.white,Color.red,Color.blue,Color.green,Color.BLACK,Color.CYAN,Color.DARK_GRAY,Color.LIGHT_GRAY,Color.MAGENTA,Color.ORANGE,Color.PINK,Color.YELLOW};
-    jComboBox1 = new javax.swing.JComboBox();
-    jLabel40 = new javax.swing.JLabel();
-    jComboBox4 = new javax.swing.JComboBox();
-    jLabel48 = new javax.swing.JLabel();
-    jPanel54 = new javax.swing.JPanel();
-    jLabel8 = new javax.swing.JLabel();
-    cbb_skMList = new javax.swing.JComboBox();
-    clear = new javax.swing.JButton();
-    moderatorPanel = new javax.swing.JPanel();
-    jTabbedPane2 = new javax.swing.JTabbedPane();
-    jPanel1 = new javax.swing.JPanel();
-    cbb_moderatorSldList = new javax.swing.JComboBox();
-    jLabel23 = new javax.swing.JLabel();
-    jPanel13 = new javax.swing.JPanel();
-    jPanel36 = new javax.swing.JPanel();
-    jLabel1 = new javax.swing.JLabel();
-    jCheckBox1 = new javax.swing.JCheckBox();
-    jCheckBox2 = new javax.swing.JCheckBox();
-    jButton7 = new javax.swing.JButton();
-    jButton14 = new javax.swing.JButton();
-    jPanel42 = new javax.swing.JPanel();
-    jLabel3 = new javax.swing.JLabel();
-    jCheckBox5 = new javax.swing.JCheckBox();
-    jCheckBox8 = new javax.swing.JCheckBox();
-    jPanel12 = new javax.swing.JPanel();
-    jPanel50 = new javax.swing.JPanel();
-    jLabel7 = new javax.swing.JLabel();
-    jTextField2 = new javax.swing.JTextField();
-    jButton9 = new javax.swing.JButton();
-    jPanel14 = new javax.swing.JPanel();
-    jLabel29 = new javax.swing.JLabel();
-    jPasswordField1 = new javax.swing.JPasswordField();
-    jLabel30 = new javax.swing.JLabel();
-    jTextField7 = new javax.swing.JTextField();
-    btnReload = new javax.swing.JButton();
-    jPanel24 = new javax.swing.JPanel();
-    jPanel15 = new javax.swing.JPanel();
-    jLabel45 = new javax.swing.JLabel();
-    jButton30 = new javax.swing.JButton();
-    jButton29 = new javax.swing.JButton();
-    jPanel3 = new javax.swing.JPanel();
-    jLabel25 = new javax.swing.JLabel();
-    cbb_moderatorMsgList = new javax.swing.JComboBox();
-    jPanel18 = new javax.swing.JPanel();
-    jPanel34 = new javax.swing.JPanel();
-    jLabel38 = new javax.swing.JLabel();
-    jCheckBox6 = new javax.swing.JCheckBox();
-    jCheckBox7 = new javax.swing.JCheckBox();
-    jButton18 = new javax.swing.JButton();
-    jButton20 = new javax.swing.JButton();
-    jPanel45 = new javax.swing.JPanel();
-    jLabel4 = new javax.swing.JLabel();
-    jCheckBox9 = new javax.swing.JCheckBox();
-    jCheckBox10 = new javax.swing.JCheckBox();
-    jPanel19 = new javax.swing.JPanel();
-    jPanel7 = new javax.swing.JPanel();
-    jLabel32 = new javax.swing.JLabel();
-    cbb_moderatorSrnList = new javax.swing.JComboBox();
-    jButton6 = new javax.swing.JButton();
-    jButton19 = new javax.swing.JButton();
-    jCheckBox19 = new javax.swing.JCheckBox();
-    jCheckBox20 = new javax.swing.JCheckBox();
-    jButton25 = new javax.swing.JButton();
-    jPanel20 = new javax.swing.JPanel();
-    jPanel32 = new javax.swing.JPanel();
-    jLabel39 = new javax.swing.JLabel();
-    jCheckBox15 = new javax.swing.JCheckBox();
-    jCheckBox16 = new javax.swing.JCheckBox();
-    jButton24 = new javax.swing.JButton();
-    jButton26 = new javax.swing.JButton();
-    jPanel46 = new javax.swing.JPanel();
-    jLabel6 = new javax.swing.JLabel();
-    jCheckBox11 = new javax.swing.JCheckBox();
-    jCheckBox12 = new javax.swing.JCheckBox();
-    jLabel43 = new javax.swing.JLabel();
-    jButton34 = new javax.swing.JButton();
-    jPanel21 = new javax.swing.JPanel();
-    jLabel41 = new javax.swing.JLabel();
-    jPanel22 = new javax.swing.JPanel();
-    jPanel26 = new javax.swing.JPanel();
-    cbb_moderatorFList = new javax.swing.JComboBox();
-    jLabel46 = new javax.swing.JLabel();
-    jPanel27 = new javax.swing.JPanel();
-    jPanel30 = new javax.swing.JPanel();
-    jLabel47 = new javax.swing.JLabel();
-    jCheckBox22 = new javax.swing.JCheckBox();
-    jCheckBox23 = new javax.swing.JCheckBox();
-    jButton35 = new javax.swing.JButton();
-    jPanel47 = new javax.swing.JPanel();
-    jLabel10 = new javax.swing.JLabel();
-    jCheckBox17 = new javax.swing.JCheckBox();
-    jCheckBox18 = new javax.swing.JCheckBox();
-    jPanel49 = new javax.swing.JPanel();
-    jPanel2 = new javax.swing.JPanel();
-    jLabel24 = new javax.swing.JLabel();
-    cbb_moderatorSkList = new javax.swing.JComboBox();
-    jPanel16 = new javax.swing.JPanel();
-    jPanel28 = new javax.swing.JPanel();
-    jLabel5 = new javax.swing.JLabel();
-    jCheckBox3 = new javax.swing.JCheckBox();
-    jCheckBox4 = new javax.swing.JCheckBox();
-    jButton8 = new javax.swing.JButton();
-    jButton13 = new javax.swing.JButton();
-    jPanel48 = new javax.swing.JPanel();
-    jLabel11 = new javax.swing.JLabel();
-    jCheckBox21 = new javax.swing.JCheckBox();
-    jCheckBox24 = new javax.swing.JCheckBox();
-    jPanel17 = new javax.swing.JPanel();
-    jPanel5 = new javax.swing.JPanel();
-    jLabel26 = new javax.swing.JLabel();
-    cbb_moderatorPermissionList = new javax.swing.JComboBox();
-    jPanel23 = new javax.swing.JPanel();
-    jPanel38 = new javax.swing.JPanel();
-    jLabel17 = new javax.swing.JLabel();
-    cbSlideAu1 = new javax.swing.JCheckBox();
-    cbSlideAu2 = new javax.swing.JCheckBox();
-    jPanel39 = new javax.swing.JPanel();
-    jLabel14 = new javax.swing.JLabel();
-    cbSketchAu1 = new javax.swing.JCheckBox();
-    cbSketchAu2 = new javax.swing.JCheckBox();
-    jPanel40 = new javax.swing.JPanel();
-    jLabel15 = new javax.swing.JLabel();
-    cbMsgAu1 = new javax.swing.JCheckBox();
-    cbMsgAu2 = new javax.swing.JCheckBox();
-    jPanel41 = new javax.swing.JPanel();
-    jLabel33 = new javax.swing.JLabel();
-    cbSrnAu1 = new javax.swing.JCheckBox();
-    cbSrnAu2 = new javax.swing.JCheckBox();
-    jPanel43 = new javax.swing.JPanel();
-    jLabel18 = new javax.swing.JLabel();
-    cbOpenWebAu = new javax.swing.JCheckBox();
-    jButton10 = new javax.swing.JButton();
-    jPanel44 = new javax.swing.JPanel();
-    jLabel28 = new javax.swing.JLabel();
-    cbFileAu1 = new javax.swing.JCheckBox();
-    cbFileAu2 = new javax.swing.JCheckBox();
-    jPanel25 = new javax.swing.JPanel();
-    jPanel8 = new javax.swing.JPanel();
-    jLabel44 = new javax.swing.JLabel();
-    jButton40 = new javax.swing.JButton();
-    jButton21 = new javax.swing.JButton();
-    jPanel4 = new javax.swing.JPanel();
-    jLabel19 = new javax.swing.JLabel();
-    jTextField5 = new javax.swing.JTextField();
-    jButton12 = new javax.swing.JButton();
-    jLabel22 = new javax.swing.JLabel();
-    cbb_moderatorElseList = new javax.swing.JComboBox();
-    jLabel34 = new javax.swing.JLabel();
-    jTextField8 = new javax.swing.JTextField();
-    jPanel9 = new javax.swing.JPanel();
-    jButton27 = new javax.swing.JButton();
-    jLabel35 = new javax.swing.JLabel();
-    jTextField9 = new javax.swing.JTextField();
-    jPanel10 = new javax.swing.JPanel();
-    jLabel42 = new javax.swing.JLabel();
-    jPanel11 = new javax.swing.JPanel();
-    jPanel35 = new javax.swing.JPanel();
-    jButton28 = new javax.swing.JButton();
-    jButton36 = new javax.swing.JButton();
-    jPanel37 = new javax.swing.JPanel();
-    jButton32 = new javax.swing.JButton();
-    jButton33 = new javax.swing.JButton();
-    jButton15 = new javax.swing.JButton();
-    jButton16 = new javax.swing.JButton();
-    statusPanel = new javax.swing.JPanel();
-    jScrollPane2 = new javax.swing.JScrollPane();
-    jTextArea2 = new javax.swing.JTextArea();
-    jTextField4 = new javax.swing.JTextField();
-    status_upperPanel = new javax.swing.JPanel();
-    jLabel36 = new javax.swing.JLabel();
-    cbb_moderatorStatusList = new javax.swing.JComboBox();
-    jButton1 = new javax.swing.JButton();
-    jButton41 = new javax.swing.JButton();
-    jButton42 = new javax.swing.JButton();
-    jButton3 = new javax.swing.JButton();
-    jButton31 = new javax.swing.JButton();
-    jButton17 = new javax.swing.JButton();
-    status_checkBox1 = new javax.swing.JCheckBox();
-    jMenuBar1 = new javax.swing.JMenuBar();
-    jMenu1 = new javax.swing.JMenu();
-    jMenuItem5 = new javax.swing.JMenuItem();
-    jMenuItem11 = new javax.swing.JMenuItem();
-    jMenuItem12 = new javax.swing.JMenuItem();
-    jMenuItem13 = new javax.swing.JMenuItem();
-    jMenuItem14 = new javax.swing.JMenuItem();
-    jMenuItem15 = new javax.swing.JMenuItem();
-    jMenuItem16 = new javax.swing.JMenuItem();
-    jMenuItem1 = new javax.swing.JMenuItem();
-    jMenu2 = new javax.swing.JMenu();
-    jMenuItem3 = new javax.swing.JMenuItem();
-    jMenu3 = new javax.swing.JMenu();
-    jMenuItem8 = new javax.swing.JMenuItem();
-    jMenuItem7 = new javax.swing.JMenuItem();
-    jMenuItem17 = new javax.swing.JMenuItem();
-    jMenuItem6 = new javax.swing.JMenuItem();
-    jMenuItem4 = new javax.swing.JMenuItem();
-    jMenuItem10 = new javax.swing.JMenuItem();
-    jMenuItem9 = new javax.swing.JMenuItem();
-    jMenuItem2 = new javax.swing.JMenuItem();
-
-    setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-    java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("ct/Bundle"); 
-    setTitle(bundle.getString("CTModerator.title")); 
-    addWindowListener(new java.awt.event.WindowAdapter() {
-      public void windowClosing(java.awt.event.WindowEvent evt) {
-        formWindowClosing(evt);
-      }
-    });
-    addWindowStateListener(new java.awt.event.WindowStateListener() {
-      public void windowStateChanged(java.awt.event.WindowEvent evt) {
-        formWindowStateChanged(evt);
-      }
-    });
-
-    jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
-      public void stateChanged(javax.swing.event.ChangeEvent evt) {
-        jTabbedPane1StateChanged(evt);
-      }
-    });
-
-    slidePanel.addMouseListener(new java.awt.event.MouseAdapter() {
-      public void mouseClicked(java.awt.event.MouseEvent evt) {
-        slidePanelMouseClicked(evt);
-      }
-      public void mousePressed(java.awt.event.MouseEvent evt) {
-        slidePanelMousePressed(evt);
-      }
-      public void mouseReleased(java.awt.event.MouseEvent evt) {
-        slidePanelMouseReleased(evt);
-      }
-    });
-    slidePanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-      public void mouseDragged(java.awt.event.MouseEvent evt) {
-        slidePanelMouseDragged(evt);
-      }
-    });
-    slidePanel.addKeyListener(new java.awt.event.KeyAdapter() {
-      public void keyPressed(java.awt.event.KeyEvent evt) {
-        slidePanelKeyPressed(evt);
-      }
-      public void keyReleased(java.awt.event.KeyEvent evt) {
-        slidePanelKeyReleased(evt);
-      }
-    });
-    slidePanel.setLayout(new java.awt.BorderLayout());
-
-    sld_upperPanel1.setLayout(new java.awt.GridLayout(2, 1));
-
-    sld_upperPanel2.setBackground(new java.awt.Color(102, 102, 102));
-    sld_upperPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jButton39.setText(bundle.getString("CTModerator.jButton39.text")); 
-    jButton39.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton39ActionPerformed(evt);
-      }
-    });
-    sld_upperPanel2.add(jButton39);
-
-    btn_openSld.setText(bundle.getString("CTModerator.btn_openSld.text")); 
-    btn_openSld.setActionCommand(bundle.getString("CTModerator.btn_openSld.actionCommand")); 
-    btn_openSld.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btn_openSldActionPerformed(evt);
-      }
-    });
-    sld_upperPanel2.add(btn_openSld);
-
-    cbb_slide.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-    sld_upperPanel2.add(cbb_slide);
-
-    jLabel12.setText(bundle.getString("CTModerator.jLabel12.text")); 
-    sld_upperPanel2.add(jLabel12);
-
-    jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel9.setText(bundle.getString("CTModerator.jLabel9.text")); 
-    sld_upperPanel2.add(jLabel9);
-
-    cbb_sldMList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-    sld_upperPanel2.add(cbb_sldMList);
-
-    sld_upperPanel1.add(sld_upperPanel2);
-
-    jPanel52.setBackground(new java.awt.Color(102, 102, 102));
-    jPanel52.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel13.setText(bundle.getString("CTModerator.jLabel13.text")); 
-    jPanel52.add(jLabel13);
-
-    cbb_slideInx.setEditable(true);
-    cbb_slideInx.setPreferredSize(new java.awt.Dimension(60, 21));
-    cbb_slideInx.addItemListener(new java.awt.event.ItemListener() {
-      public void itemStateChanged(java.awt.event.ItemEvent evt) {
-        cbb_slideInxItemStateChanged(evt);
-      }
-    });
-    cbb_slideInx.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cbb_slideInxActionPerformed(evt);
-      }
-    });
-    jPanel52.add(cbb_slideInx);
-
-    jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel20.setText(bundle.getString("CTModerator.jLabel20.text")); 
-    jPanel52.add(jLabel20);
-
-    jButton38.setText(bundle.getString("CTModerator.jButton38.text")); 
-    jButton38.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton38ActionPerformed(evt);
-      }
-    });
-    jPanel52.add(jButton38);
-
-    jButton2.setText(bundle.getString("CTModerator.jButton2.text")); 
-    jButton2.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton2ActionPerformed(evt);
-      }
-    });
-    jPanel52.add(jButton2);
-
-    jButton5.setText(bundle.getString("CTModerator.jButton5.text")); 
-    jButton5.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton5ActionPerformed(evt);
-      }
-    });
-    jPanel52.add(jButton5);
-
-    sld_upperPanel1.add(jPanel52);
-
-    slidePanel.add(sld_upperPanel1, java.awt.BorderLayout.NORTH);
-
-    jTabbedPane1.addTab(bundle.getString("CTModerator.slidePanel.TabConstraints.tabTitle"), slidePanel); 
-
-    msgPanel.setLayout(new java.awt.BorderLayout());
-
-    msg_panel1.setLayout(new java.awt.BorderLayout());
-
-    msg_scrollPane.setViewportView(msg_textPane);
-
-    msg_panel1.add(msg_scrollPane, java.awt.BorderLayout.CENTER);
-
-    msg_upperPanel.setBackground(new java.awt.Color(102, 102, 102));
-    msg_upperPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    msg_btnSaveAs.setText(bundle.getString("CTModerator.msg_btnSaveAs.text")); 
-    msg_btnSaveAs.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        msg_btnSaveAsActionPerformed(evt);
-      }
-    });
-    msg_upperPanel.add(msg_btnSaveAs);
-
-    msg_btnClear.setText(bundle.getString("CTModerator.msg_btnClear.text")); 
-    msg_btnClear.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        msg_btnClearActionPerformed(evt);
-      }
-    });
-    msg_upperPanel.add(msg_btnClear);
-
-    msg_btnPlus.setText(bundle.getString("CTModerator.msg_btnPlus.text")); 
-    msg_btnPlus.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        msg_btnPlusActionPerformed(evt);
-      }
-    });
-    msg_upperPanel.add(msg_btnPlus);
-
-    msg_btnMinus.setText(bundle.getString("CTModerator.msg_btnMinus.text")); 
-    msg_btnMinus.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        msg_btnMinusActionPerformed(evt);
-      }
-    });
-    msg_upperPanel.add(msg_btnMinus);
-
-    jLabel31.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel31.setText(bundle.getString("CTModerator.jLabel31.text")); 
-    msg_upperPanel.add(jLabel31);
-
-    jComboBox2.setModel((new javax.swing.DefaultComboBoxModel(colors)));
-    jComboBox2.setRenderer(new MyCellRenderer());
-    jComboBox2.addItemListener(new java.awt.event.ItemListener() {
-      public void itemStateChanged(java.awt.event.ItemEvent evt) {
-        jComboBox2ItemStateChanged(evt);
-      }
-    });
-    msg_upperPanel.add(jComboBox2);
-
-    msg_checkBox1.setForeground(new java.awt.Color(255, 255, 255));
-    msg_checkBox1.setText(bundle.getString("CTModerator.msg_checkBox1.text")); 
-    msg_checkBox1.setOpaque(false);
-    msg_upperPanel.add(msg_checkBox1);
-
-    msg_panel1.add(msg_upperPanel, java.awt.BorderLayout.PAGE_START);
-
-    msg_TabbedPane.addTab(bundle.getString("CTModerator.msg_panel1.TabConstraints.tabTitle"), msg_panel1); 
-
-    msg_panel2.setLayout(new java.awt.BorderLayout());
-
-    msg_textArea1.setColumns(20);
-    msg_textArea1.setLineWrap(true);
-    msg_textArea1.setRows(5);
-    msg_scrollPane2.setViewportView(msg_textArea1);
-
-    msg_panel2.add(msg_scrollPane2, java.awt.BorderLayout.CENTER);
-
-    msg_draft_upperPanel.setBackground(new java.awt.Color(102, 102, 102));
-    msg_draft_upperPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
-
-    msg_button10.setText(bundle.getString("CTModerator.msg_button10.text")); 
-    msg_button10.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        msg_button10ActionPerformed(evt);
-      }
-    });
-    msg_draft_upperPanel.add(msg_button10);
-
-    msg_button9.setText(bundle.getString("CTModerator.msg_button9.text")); 
-    msg_button9.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        msg_button9ActionPerformed(evt);
-      }
-    });
-    msg_draft_upperPanel.add(msg_button9);
-
-    msg_button8.setText(bundle.getString("CTModerator.msg_button8.text")); 
-    msg_button8.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        msg_button8ActionPerformed(evt);
-      }
-    });
-    msg_draft_upperPanel.add(msg_button8);
-
-    msg_button7.setText(bundle.getString("CTModerator.msg_button7.text")); 
-    msg_button7.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        msg_button7ActionPerformed(evt);
-      }
-    });
-    msg_draft_upperPanel.add(msg_button7);
-
-    msg_panel2.add(msg_draft_upperPanel, java.awt.BorderLayout.PAGE_START);
-
-    msg_TabbedPane.addTab(bundle.getString("CTModerator.msg_panel2.TabConstraints.tabTitle"), msg_panel2); 
-
-    msgPanel.add(msg_TabbedPane, java.awt.BorderLayout.CENTER);
-
-    msg_lowerPanel.setLayout(new java.awt.GridLayout(2, 1));
-
-    jPanel51.setLayout(new java.awt.BorderLayout());
-
-    msg_textField1.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        msg_textField1ActionPerformed(evt);
-      }
-    });
-    jPanel51.add(msg_textField1, java.awt.BorderLayout.CENTER);
-
-    msg_panel7.setBackground(new java.awt.Color(102, 102, 102));
-
-    msg_label1.setForeground(new java.awt.Color(255, 255, 255));
-    msg_label1.setText(bundle.getString("CTModerator.msg_label1.text")); 
-    msg_panel7.add(msg_label1);
-
-    jPanel51.add(msg_panel7, java.awt.BorderLayout.WEST);
-
-    msg_lowerPanel.add(jPanel51);
-
-    jPanel53.setLayout(new java.awt.BorderLayout());
-
-    msg_panel5.setBackground(new java.awt.Color(102, 102, 102));
-
-    jCheckBox14.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox14.setText(bundle.getString("CTModerator.jCheckBox14.text")); 
-    jCheckBox14.setOpaque(false);
-    msg_panel5.add(jCheckBox14);
-
-    jCheckBox13.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox13.setText(bundle.getString("CTModerator.jCheckBox13.text")); 
-    jCheckBox13.setOpaque(false);
-    msg_panel5.add(jCheckBox13);
-
-    jLabel27.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel27.setText(bundle.getString("CTModerator.jLabel27.text")); 
-    msg_panel5.add(jLabel27);
-
-    jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(colors2));
-    jComboBox7.setRenderer(new MyCellRenderer());
-    msg_panel5.add(jComboBox7);
-
-    msg_btn_sendMsg.setText(bundle.getString("CTModerator.msg_btn_sendMsg.text")); 
-    msg_btn_sendMsg.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        msg_btn_sendMsgActionPerformed(evt);
-      }
-    });
-    msg_panel5.add(msg_btn_sendMsg);
-
-    msg_btnSendDraft.setText(bundle.getString("CTModerator.msg_btnSendDraft.text")); 
-    msg_btnSendDraft.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        msg_btnSendDraftActionPerformed(evt);
-      }
-    });
-    msg_panel5.add(msg_btnSendDraft);
-
-    msg_btnSendClear.setText(bundle.getString("CTModerator.msg_btnSendClear.text")); 
-    msg_btnSendClear.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        msg_btnSendClearActionPerformed(evt);
-      }
-    });
-    msg_panel5.add(msg_btnSendClear);
-
-    msg_label2.setForeground(new java.awt.Color(255, 255, 255));
-    msg_label2.setText(bundle.getString("CTModerator.msg_label2.text")); 
-    msg_panel5.add(msg_label2);
-
-    cbb_msgMList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-    cbb_msgMList.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cbb_msgMListActionPerformed(evt);
-      }
-    });
-    msg_panel5.add(cbb_msgMList);
-
-    jPanel53.add(msg_panel5, java.awt.BorderLayout.EAST);
-
-    msg_lowerPanel.add(jPanel53);
-
-    msgPanel.add(msg_lowerPanel, java.awt.BorderLayout.SOUTH);
-
-    jTabbedPane1.addTab(bundle.getString("CTModerator.msgPanel.TabConstraints.tabTitle"), msgPanel); 
-
-    screenPanel.setLayout(new java.awt.BorderLayout());
-
-    srn_upperPanel.setBackground(new java.awt.Color(102, 102, 102));
-    srn_upperPanel.setPreferredSize(new java.awt.Dimension(849, 33));
-    srn_upperPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel2.setText(bundle.getString("CTModerator.jLabel2.text")); 
-    srn_upperPanel.add(jLabel2);
-
-    cbb_srnMList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All" }));
-    cbb_srnMList.addItemListener(new java.awt.event.ItemListener() {
-      public void itemStateChanged(java.awt.event.ItemEvent evt) {
-        cbb_srnMListItemStateChanged(evt);
-      }
-    });
-    cbb_srnMList.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cbb_srnMListActionPerformed(evt);
-      }
-    });
-    srn_upperPanel.add(cbb_srnMList);
-
-    btn_srnStart.setText(bundle.getString("CTModerator.btn_srnStart.text")); 
-    btn_srnStart.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btn_srnStartActionPerformed(evt);
-      }
-    });
-    srn_upperPanel.add(btn_srnStart);
-
-    rb_srnMonitor.setForeground(new java.awt.Color(255, 255, 255));
-    rb_srnMonitor.setText(bundle.getString("CTModerator.rb_srnMonitor.text")); 
-    rb_srnMonitor.setOpaque(false);
-    rb_srnMonitor.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        rb_srnMonitorActionPerformed(evt);
-      }
-    });
-    srn_upperPanel.add(rb_srnMonitor);
-
-    rb_srnControlAndImage.setForeground(new java.awt.Color(255, 255, 255));
-    rb_srnControlAndImage.setSelected(true);
-    rb_srnControlAndImage.setText(bundle.getString("CTModerator.rb_srnControlAndImage.text")); 
-    rb_srnControlAndImage.setOpaque(false);
-    rb_srnControlAndImage.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        rb_srnControlAndImageActionPerformed(evt);
-      }
-    });
-    srn_upperPanel.add(rb_srnControlAndImage);
-
-    btn_srnRefresh.setText(bundle.getString("CTModerator.btn_srnRefresh.text")); 
-    btn_srnRefresh.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btn_srnRefreshActionPerformed(evt);
-      }
-    });
-    srn_upperPanel.add(btn_srnRefresh);
-
-    btn_srnACD.setText(bundle.getString("CTModerator.btn_srnACD.text")); 
-    btn_srnACD.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btn_srnACDActionPerformed(evt);
-      }
-    });
-    srn_upperPanel.add(btn_srnACD);
-
-    jButton11.setText(bundle.getString("CTModerator.jButton11.text")); 
-    jButton11.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton11ActionPerformed(evt);
-      }
-    });
-    srn_upperPanel.add(jButton11);
-
-    cb_srnFix.setForeground(new java.awt.Color(255, 255, 255));
-    cb_srnFix.setSelected(true);
-    cb_srnFix.setText(bundle.getString("CTModerator.cb_srnFix.text")); 
-    cb_srnFix.setOpaque(false);
-    cb_srnFix.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cb_srnFixActionPerformed(evt);
-      }
-    });
-    srn_upperPanel.add(cb_srnFix);
-
-    screenPanel.add(srn_upperPanel, java.awt.BorderLayout.NORTH);
-    screenPanel.add(srn_scrollPane1, java.awt.BorderLayout.CENTER);
-
-    jTabbedPane1.addTab(bundle.getString("CTModerator.screenPanel.TabConstraints.tabTitle"), screenPanel); 
-
-    filePanel.setLayout(null);
-
-    f_panel1.setBackground(new java.awt.Color(204, 255, 255));
-    f_panel1.setLayout(new java.awt.BorderLayout());
-
-    f_panel6.setLayout(new java.awt.GridLayout(2, 1));
-
-    f_panel20.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    btn_fResetLayout1.setText(bundle.getString("CTModerator.btn_fResetLayout1.text")); 
-    btn_fResetLayout1.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btn_fResetLayout1ActionPerformed(evt);
-      }
-    });
-    f_panel20.add(btn_fResetLayout1);
-
-    btn_fRoot1.setText(bundle.getString("CTModerator.btn_fRoot1.text")); 
-    f_panel20.add(btn_fRoot1);
-
-    f_checkBox1.setText(bundle.getString("CTModerator.f_checkBox1.text")); 
-    f_panel20.add(f_checkBox1);
-
-    f_panel6.add(f_panel20);
-
-    f_panel21.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    f_label1.setText(bundle.getString("CTModerator.f_label1.text")); 
-    f_panel21.add(f_label1);
-
-    cbb_fList1.setEditable(true);
-    cbb_fList1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-    cbb_fList1.addItemListener(new java.awt.event.ItemListener() {
-      public void itemStateChanged(java.awt.event.ItemEvent evt) {
-        cbb_fList1ItemStateChanged(evt);
-      }
-    });
-    cbb_fList1.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cbb_fList1ActionPerformed(evt);
-      }
-    });
-    f_panel21.add(cbb_fList1);
-
-    f_panel6.add(f_panel21);
-
-    f_panel1.add(f_panel6, java.awt.BorderLayout.NORTH);
-
-    f_panel7.setBackground(new java.awt.Color(204, 204, 255));
-    f_panel7.setLayout(new java.awt.BorderLayout());
-    f_panel1.add(f_panel7, java.awt.BorderLayout.CENTER);
-
-    filePanel.add(f_panel1);
-    f_panel1.setBounds(20, 10, 310, 210);
-
-    f_panel2.setBackground(new java.awt.Color(204, 255, 255));
-    f_panel2.setLayout(new java.awt.BorderLayout());
-
-    jPanel29.setLayout(new java.awt.GridLayout(2, 0));
-
-    f_panel22.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    btn_fResetLayout2.setText(bundle.getString("CTModerator.btn_fResetLayout2.text")); 
-    btn_fResetLayout2.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btn_fResetLayout2ActionPerformed(evt);
-      }
-    });
-    f_panel22.add(btn_fResetLayout2);
-
-    btn_fRoot2.setText(bundle.getString("CTModerator.btn_fRoot2.text")); 
-    f_panel22.add(btn_fRoot2);
-
-    jPanel29.add(f_panel22);
-
-    f_panel23.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    f_label2.setText(bundle.getString("CTModerator.f_label2.text")); 
-    f_panel23.add(f_label2);
-
-    cbb_fMlist.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-    cbb_fMlist.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cbb_fMlistActionPerformed(evt);
-      }
-    });
-    f_panel23.add(cbb_fMlist);
-
-    cbb_fList2.setEditable(true);
-    cbb_fList2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-    cbb_fList2.addItemListener(new java.awt.event.ItemListener() {
-      public void itemStateChanged(java.awt.event.ItemEvent evt) {
-        cbb_fList2ItemStateChanged(evt);
-      }
-    });
-    cbb_fList2.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cbb_fList2ActionPerformed(evt);
-      }
-    });
-    f_panel23.add(cbb_fList2);
-
-    jPanel29.add(f_panel23);
-
-    f_panel2.add(jPanel29, java.awt.BorderLayout.NORTH);
-
-    jPanel31.setBackground(new java.awt.Color(204, 204, 255));
-    jPanel31.setLayout(new java.awt.BorderLayout());
-    f_panel2.add(jPanel31, java.awt.BorderLayout.CENTER);
-
-    filePanel.add(f_panel2);
-    f_panel2.setBounds(360, 10, 300, 210);
-
-    f_panel3.setBackground(new java.awt.Color(204, 255, 255));
-    f_panel3.setLayout(new java.awt.BorderLayout());
-
-    f_table1.setModel(new javax.swing.table.DefaultTableModel(
-      new Object [][] {
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null}
-      },
-      new String [] {
-        "Name", "Type", "Modified Time", "Size"
-      }
-    ) {
-      boolean[] canEdit = new boolean [] {
-        false, false, false, false
-      };
-
-      public boolean isCellEditable(int rowIndex, int columnIndex) {
-        return canEdit [columnIndex];
-      }
-    });
-    f_table1.addMouseListener(new java.awt.event.MouseAdapter() {
-      public void mouseClicked(java.awt.event.MouseEvent evt) {
-        f_table1MouseClicked(evt);
-      }
-      public void mouseReleased(java.awt.event.MouseEvent evt) {
-        f_table1MouseReleased(evt);
-      }
-    });
-    f_scrollPane6.setViewportView(f_table1);
-
-    f_panel3.add(f_scrollPane6, java.awt.BorderLayout.CENTER);
-
-    filePanel.add(f_panel3);
-    f_panel3.setBounds(20, 250, 160, 50);
-
-    f_panel4.setBackground(new java.awt.Color(204, 255, 255));
-    f_panel4.setLayout(new java.awt.BorderLayout());
-
-    f_table2.setModel(new javax.swing.table.DefaultTableModel(
-      new Object [][] {
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null}
-      },
-      new String [] {
-        "Name", "Type", "Modified Time", "Size"
-      }
-    ) {
-      boolean[] canEdit = new boolean [] {
-        false, false, false, false
-      };
-
-      public boolean isCellEditable(int rowIndex, int columnIndex) {
-        return canEdit [columnIndex];
-      }
-    });
-    f_table2.addMouseListener(new java.awt.event.MouseAdapter() {
-      public void mouseClicked(java.awt.event.MouseEvent evt) {
-        f_table2MouseClicked(evt);
-      }
-      public void mouseReleased(java.awt.event.MouseEvent evt) {
-        f_table2MouseReleased(evt);
-      }
-    });
-    f_scrollPane7.setViewportView(f_table2);
-
-    f_panel4.add(f_scrollPane7, java.awt.BorderLayout.CENTER);
-
-    filePanel.add(f_panel4);
-    f_panel4.setBounds(220, 250, 160, 50);
-
-    f_panel5.setBackground(new java.awt.Color(204, 204, 255));
-    f_panel5.setLayout(new java.awt.BorderLayout());
-
-    f_tabbedPane1.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
-
-    f_panel18.setLayout(new java.awt.BorderLayout());
-
-    jScrollPane4.setViewportView(jTextPane1);
-
-    f_panel18.add(jScrollPane4, java.awt.BorderLayout.CENTER);
-
-    f_tabbedPane1.addTab(bundle.getString("CTModerator.f_panel18.TabConstraints.tabTitle"), f_panel18); 
-
-    jPanel6.setLayout(new java.awt.BorderLayout());
-
-    jTextArea3.setColumns(20);
-    jTextArea3.setRows(5);
-    jScrollPane3.setViewportView(jTextArea3);
-
-    jPanel6.add(jScrollPane3, java.awt.BorderLayout.CENTER);
-
-    f_tabbedPane1.addTab(bundle.getString("CTModerator.jPanel6.TabConstraints.tabTitle"), jPanel6); 
-
-    jPanel33.setLayout(new java.awt.BorderLayout());
-
-    jTextArea1.setColumns(20);
-    jTextArea1.setRows(5);
-    jScrollPane1.setViewportView(jTextArea1);
-
-    jPanel33.add(jScrollPane1, java.awt.BorderLayout.CENTER);
-
-    f_tabbedPane1.addTab(bundle.getString("CTModerator.jPanel33.TabConstraints.tabTitle"), jPanel33); 
-
-    f_panel5.add(f_tabbedPane1, java.awt.BorderLayout.CENTER);
-
-    filePanel.add(f_panel5);
-    f_panel5.setBounds(17, 330, 490, 60);
-
-    f_panel10.setBackground(new java.awt.Color(255, 204, 255));
-    f_panel10.addMouseListener(new java.awt.event.MouseAdapter() {
-      public void mouseEntered(java.awt.event.MouseEvent evt) {
-        f_panel10MouseEntered(evt);
-      }
-      public void mouseExited(java.awt.event.MouseEvent evt) {
-        f_panel10MouseExited(evt);
-      }
-      public void mousePressed(java.awt.event.MouseEvent evt) {
-        f_panel10MousePressed(evt);
-      }
-    });
-    f_panel10.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-      public void mouseDragged(java.awt.event.MouseEvent evt) {
-        f_panel10MouseDragged(evt);
-      }
-      public void mouseMoved(java.awt.event.MouseEvent evt) {
-        f_panel10MouseMoved(evt);
-      }
-    });
-
-    javax.swing.GroupLayout f_panel10Layout = new javax.swing.GroupLayout(f_panel10);
-    f_panel10.setLayout(f_panel10Layout);
-    f_panel10Layout.setHorizontalGroup(
-      f_panel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 140, Short.MAX_VALUE)
-    );
-    f_panel10Layout.setVerticalGroup(
-      f_panel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 10, Short.MAX_VALUE)
-    );
-
-    filePanel.add(f_panel10);
-    f_panel10.setBounds(320, 230, 140, 10);
-
-    f_panel11.setBackground(new java.awt.Color(255, 204, 255));
-    f_panel11.addMouseListener(new java.awt.event.MouseAdapter() {
-      public void mouseEntered(java.awt.event.MouseEvent evt) {
-        f_panel11MouseEntered(evt);
-      }
-      public void mouseExited(java.awt.event.MouseEvent evt) {
-        f_panel11MouseExited(evt);
-      }
-      public void mousePressed(java.awt.event.MouseEvent evt) {
-        f_panel11MousePressed(evt);
-      }
-      public void mouseReleased(java.awt.event.MouseEvent evt) {
-        f_panel11MouseReleased(evt);
-      }
-    });
-    f_panel11.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-      public void mouseDragged(java.awt.event.MouseEvent evt) {
-        f_panel11MouseDragged(evt);
-      }
-      public void mouseMoved(java.awt.event.MouseEvent evt) {
-        f_panel11MouseMoved(evt);
-      }
-    });
-
-    javax.swing.GroupLayout f_panel11Layout = new javax.swing.GroupLayout(f_panel11);
-    f_panel11.setLayout(f_panel11Layout);
-    f_panel11Layout.setHorizontalGroup(
-      f_panel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 370, Short.MAX_VALUE)
-    );
-    f_panel11Layout.setVerticalGroup(
-      f_panel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 10, Short.MAX_VALUE)
-    );
-
-    filePanel.add(f_panel11);
-    f_panel11.setBounds(70, 310, 370, 10);
-
-    f_panel12.setBackground(new java.awt.Color(255, 204, 255));
-    f_panel12.addMouseListener(new java.awt.event.MouseAdapter() {
-      public void mouseEntered(java.awt.event.MouseEvent evt) {
-        f_panel12MouseEntered(evt);
-      }
-      public void mouseExited(java.awt.event.MouseEvent evt) {
-        f_panel12MouseExited(evt);
-      }
-      public void mousePressed(java.awt.event.MouseEvent evt) {
-        f_panel12MousePressed(evt);
-      }
-    });
-    f_panel12.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-      public void mouseDragged(java.awt.event.MouseEvent evt) {
-        f_panel12MouseDragged(evt);
-      }
-      public void mouseMoved(java.awt.event.MouseEvent evt) {
-        f_panel12MouseMoved(evt);
-      }
-    });
-
-    javax.swing.GroupLayout f_panel12Layout = new javax.swing.GroupLayout(f_panel12);
-    f_panel12.setLayout(f_panel12Layout);
-    f_panel12Layout.setHorizontalGroup(
-      f_panel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 10, Short.MAX_VALUE)
-    );
-    f_panel12Layout.setVerticalGroup(
-      f_panel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 190, Short.MAX_VALUE)
-    );
-
-    filePanel.add(f_panel12);
-    f_panel12.setBounds(700, 150, 10, 190);
-
-    f_panel13.setBackground(new java.awt.Color(255, 204, 255));
-    f_panel13.addMouseListener(new java.awt.event.MouseAdapter() {
-      public void mouseEntered(java.awt.event.MouseEvent evt) {
-        f_panel13MouseEntered(evt);
-      }
-      public void mouseExited(java.awt.event.MouseEvent evt) {
-        f_panel13MouseExited(evt);
-      }
-      public void mousePressed(java.awt.event.MouseEvent evt) {
-        f_panel13MousePressed(evt);
-      }
-    });
-    f_panel13.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-      public void mouseDragged(java.awt.event.MouseEvent evt) {
-        f_panel13MouseDragged(evt);
-      }
-      public void mouseMoved(java.awt.event.MouseEvent evt) {
-        f_panel13MouseMoved(evt);
-      }
-    });
-
-    javax.swing.GroupLayout f_panel13Layout = new javax.swing.GroupLayout(f_panel13);
-    f_panel13.setLayout(f_panel13Layout);
-    f_panel13Layout.setHorizontalGroup(
-      f_panel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 120, Short.MAX_VALUE)
-    );
-    f_panel13Layout.setVerticalGroup(
-      f_panel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 10, Short.MAX_VALUE)
-    );
-
-    filePanel.add(f_panel13);
-    f_panel13.setBounds(40, 230, 120, 10);
-
-    jTabbedPane1.addTab(bundle.getString("CTModerator.filePanel.TabConstraints.tabTitle"), filePanel); 
-
-    sketchPanel.setLayout(new java.awt.BorderLayout());
-
-    sk_upperPanel.setBackground(new java.awt.Color(102, 102, 102));
-    sk_upperPanel.setLayout(new java.awt.GridLayout(1, 2));
-
-    jPanel55.setBackground(new java.awt.Color(102, 102, 102));
-    jPanel55.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jButton4.setText(bundle.getString("CTModerator.jButton4.text")); 
-    jButton4.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton4ActionPerformed(evt);
-      }
-    });
-    jPanel55.add(jButton4);
-
-    jLabel37.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel37.setText(bundle.getString("CTModerator.jLabel37.text")); 
-    jPanel55.add(jLabel37);
-
-    jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(colors4));
-    jComboBox3.setRenderer(new MyCellRenderer());
-    jComboBox3.addItemListener(new java.awt.event.ItemListener() {
-      public void itemStateChanged(java.awt.event.ItemEvent evt) {
-        jComboBox3ItemStateChanged(evt);
-      }
-    });
-    jPanel55.add(jComboBox3);
-
-    jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel16.setText(bundle.getString("CTModerator.jLabel16.text")); 
-    jPanel55.add(jLabel16);
-
-    jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(colors3));
-    jComboBox1.setRenderer(new MyCellRenderer());
-    jPanel55.add(jComboBox1);
-
-    jLabel40.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel40.setText(bundle.getString("CTModerator.jLabel40.text")); 
-    jPanel55.add(jLabel40);
-
-    jComboBox4.setEditable(true);
-    jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30" }));
-    jComboBox4.setPreferredSize(new java.awt.Dimension(48, 21));
-    jPanel55.add(jComboBox4);
-
-    jLabel48.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel48.setText(bundle.getString("CTModerator.jLabel48.text")); 
-    jPanel55.add(jLabel48);
-
-    sk_upperPanel.add(jPanel55);
-
-    jPanel54.setBackground(new java.awt.Color(102, 102, 102));
-    jPanel54.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
-
-    jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel8.setText(bundle.getString("CTModerator.jLabel8.text")); 
-    jPanel54.add(jLabel8);
-
-    cbb_skMList.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cbb_skMListActionPerformed(evt);
-      }
-    });
-    jPanel54.add(cbb_skMList);
-
-    clear.setText(bundle.getString("CTModerator.clear.text")); 
-    clear.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        clearActionPerformed(evt);
-      }
-    });
-    jPanel54.add(clear);
-
-    sk_upperPanel.add(jPanel54);
-
-    sketchPanel.add(sk_upperPanel, java.awt.BorderLayout.NORTH);
-
-    jTabbedPane1.addTab(bundle.getString("CTModerator.sketchPanel.TabConstraints.tabTitle"), sketchPanel); 
-
-    moderatorPanel.setLayout(new java.awt.BorderLayout());
-
-    jPanel1.setLayout(null);
-
-    cbb_moderatorSldList.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cbb_moderatorSldListActionPerformed(evt);
-      }
-    });
-    jPanel1.add(cbb_moderatorSldList);
-    cbb_moderatorSldList.setBounds(70, 20, 120, 21);
-
-    jLabel23.setText(bundle.getString("CTModerator.jLabel23.text")); 
-    jPanel1.add(jLabel23);
-    jLabel23.setBounds(20, 20, 50, 20);
-
-    jPanel13.setBackground(new java.awt.Color(0, 51, 204));
-    jPanel13.setLayout(null);
-
-    jPanel36.setOpaque(false);
-    jPanel36.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel1.setText(bundle.getString("CTModerator.jLabel1.text")); 
-    jPanel36.add(jLabel1);
-    jLabel1.getAccessibleContext().setAccessibleName(bundle.getString("CTModerator.jLabel1.AccessibleContext.accessibleName")); 
-
-    jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox1.setText(bundle.getString("CTModerator.jCheckBox1.text")); 
-    jCheckBox1.setOpaque(false);
-    jPanel36.add(jCheckBox1);
-
-    jCheckBox2.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox2.setText(bundle.getString("CTModerator.jCheckBox2.text")); 
-    jCheckBox2.setOpaque(false);
-    jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox2ActionPerformed(evt);
-      }
-    });
-    jPanel36.add(jCheckBox2);
-
-    jButton7.setText(bundle.getString("CTModerator.jButton7.text")); 
-    jButton7.setActionCommand(bundle.getString("CTModerator.jButton7.actionCommand")); 
-    jButton7.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton7ActionPerformed(evt);
-      }
-    });
-    jPanel36.add(jButton7);
-
-    jButton14.setText(bundle.getString("CTModerator.jButton14.text")); 
-    jButton14.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton14ActionPerformed(evt);
-      }
-    });
-    jPanel36.add(jButton14);
-
-    jPanel13.add(jPanel36);
-    jPanel36.setBounds(10, 50, 820, 40);
-
-    jPanel42.setOpaque(false);
-    jPanel42.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel3.setText(bundle.getString("CTModerator.jLabel3.text")); 
-    jPanel42.add(jLabel3);
-
-    jCheckBox5.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox5.setText(bundle.getString("CTModerator.jCheckBox5.text")); 
-    jCheckBox5.setOpaque(false);
-    jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox5ActionPerformed(evt);
-      }
-    });
-    jPanel42.add(jCheckBox5);
-
-    jCheckBox8.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox8.setText(bundle.getString("CTModerator.jCheckBox8.text_1")); 
-    jCheckBox8.setOpaque(false);
-    jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox8ActionPerformed(evt);
-      }
-    });
-    jPanel42.add(jCheckBox8);
-
-    jPanel13.add(jPanel42);
-    jPanel42.setBounds(10, 10, 820, 40);
-
-    jPanel1.add(jPanel13);
-    jPanel13.setBounds(20, 70, 880, 100);
-
-    jPanel12.setBackground(new java.awt.Color(255, 255, 204));
-    jPanel12.setLayout(null);
-
-    jPanel50.setOpaque(false);
-    jPanel50.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel7.setText(bundle.getString("CTModerator.jLabel7.text")); 
-    jPanel50.add(jLabel7);
-
-    jTextField2.setToolTipText(bundle.getString("CTModerator.jTextField2.toolTipText")); 
-    jTextField2.setPreferredSize(new java.awt.Dimension(606, 21));
-    jPanel50.add(jTextField2);
-
-    jButton9.setText(bundle.getString("CTModerator.jButton9.text")); 
-    jButton9.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton9ActionPerformed(evt);
-      }
-    });
-    jPanel50.add(jButton9);
-
-    jPanel12.add(jPanel50);
-    jPanel50.setBounds(10, 10, 810, 40);
-
-    jPanel14.setOpaque(false);
-    jPanel14.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel29.setText(bundle.getString("CTModerator.jLabel29.text")); 
-    jPanel14.add(jLabel29);
-
-    jPasswordField1.setText(bundle.getString("CTModerator.jPasswordField1.text")); 
-    jPasswordField1.setToolTipText(bundle.getString("CTModerator.jPasswordField1.toolTipText")); 
-    jPasswordField1.setPreferredSize(new java.awt.Dimension(106, 25));
-    jPanel14.add(jPasswordField1);
-
-    jLabel30.setText(bundle.getString("CTModerator.jLabel30.text")); 
-    jPanel14.add(jLabel30);
-
-    jTextField7.setToolTipText(bundle.getString("CTModerator.jTextField7.toolTipText")); 
-    jTextField7.setPreferredSize(new java.awt.Dimension(26, 25));
-    jPanel14.add(jTextField7);
-
-    btnReload.setText(bundle.getString("CTModerator.btnReload.text")); 
-    btnReload.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btnReloadActionPerformed(evt);
-      }
-    });
-    jPanel14.add(btnReload);
-
-    jPanel12.add(jPanel14);
-    jPanel14.setBounds(470, 50, 370, 40);
-
-    jPanel1.add(jPanel12);
-    jPanel12.setBounds(20, 170, 880, 100);
-
-    jPanel24.setBackground(new java.awt.Color(204, 204, 255));
-    jPanel24.setLayout(null);
-
-    jPanel15.setOpaque(false);
-    jPanel15.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel45.setText(bundle.getString("CTModerator.jLabel45.text")); 
-    jPanel15.add(jLabel45);
-
-    jButton30.setText(bundle.getString("CTModerator.jButton30.text")); 
-    jButton30.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton30ActionPerformed(evt);
-      }
-    });
-    jPanel15.add(jButton30);
-
-    jButton29.setText(bundle.getString("CTModerator.jButton29.text")); 
-    jButton29.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton29ActionPerformed(evt);
-      }
-    });
-    jPanel15.add(jButton29);
-
-    jPanel24.add(jPanel15);
-    jPanel15.setBounds(10, 20, 840, 40);
-
-    jPanel1.add(jPanel24);
-    jPanel24.setBounds(20, 270, 880, 80);
-
-    jTabbedPane2.addTab(bundle.getString("CTModerator.jPanel1.TabConstraints.tabTitle"), jPanel1); 
-
-    jPanel3.setLayout(null);
-
-    jLabel25.setText(bundle.getString("CTModerator.jLabel25.text")); 
-    jPanel3.add(jLabel25);
-    jLabel25.setBounds(30, 30, 50, 20);
-
-    jPanel3.add(cbb_moderatorMsgList);
-    cbb_moderatorMsgList.setBounds(90, 30, 170, 21);
-
-    jPanel18.setBackground(new java.awt.Color(0, 51, 204));
-    jPanel18.setLayout(null);
-
-    jPanel34.setOpaque(false);
-    jPanel34.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel38.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel38.setText(bundle.getString("CTModerator.jLabel38.text")); 
-    jPanel34.add(jLabel38);
-
-    jCheckBox6.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox6.setText(bundle.getString("CTModerator.jCheckBox6.text")); 
-    jCheckBox6.setOpaque(false);
-    jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox6ActionPerformed(evt);
-      }
-    });
-    jPanel34.add(jCheckBox6);
-
-    jCheckBox7.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox7.setText(bundle.getString("CTModerator.jCheckBox7.text")); 
-    jCheckBox7.setOpaque(false);
-    jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox7ActionPerformed(evt);
-      }
-    });
-    jPanel34.add(jCheckBox7);
-
-    jButton18.setText(bundle.getString("CTModerator.jButton18.text")); 
-    jButton18.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton18ActionPerformed(evt);
-      }
-    });
-    jPanel34.add(jButton18);
-
-    jButton20.setText(bundle.getString("CTModerator.jButton20.text")); 
-    jButton20.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton20ActionPerformed(evt);
-      }
-    });
-    jPanel34.add(jButton20);
-
-    jPanel18.add(jPanel34);
-    jPanel34.setBounds(10, 50, 790, 40);
-
-    jPanel45.setOpaque(false);
-    jPanel45.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel4.setText(bundle.getString("CTModerator.jLabel4.text")); 
-    jPanel45.add(jLabel4);
-
-    jCheckBox9.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox9.setText(bundle.getString("CTModerator.jCheckBox9.text")); 
-    jCheckBox9.setOpaque(false);
-    jCheckBox9.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox9ActionPerformed(evt);
-      }
-    });
-    jPanel45.add(jCheckBox9);
-
-    jCheckBox10.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox10.setText(bundle.getString("CTModerator.jCheckBox10.text")); 
-    jCheckBox10.setOpaque(false);
-    jCheckBox10.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox10ActionPerformed(evt);
-      }
-    });
-    jPanel45.add(jCheckBox10);
-
-    jPanel18.add(jPanel45);
-    jPanel45.setBounds(10, 10, 780, 40);
-
-    jPanel3.add(jPanel18);
-    jPanel18.setBounds(20, 60, 870, 100);
-
-    jPanel19.setBackground(new java.awt.Color(255, 255, 204));
-    jPanel3.add(jPanel19);
-    jPanel19.setBounds(20, 160, 870, 120);
-
-    jTabbedPane2.addTab(bundle.getString("CTModerator.jPanel3.TabConstraints.tabTitle"), jPanel3); 
-
-    jPanel7.setOpaque(false);
-    jPanel7.setLayout(null);
-
-    jLabel32.setText(bundle.getString("CTModerator.jLabel32.text")); 
-    jPanel7.add(jLabel32);
-    jLabel32.setBounds(30, 20, 50, 20);
-
-    jPanel7.add(cbb_moderatorSrnList);
-    cbb_moderatorSrnList.setBounds(90, 20, 170, 21);
-
-    jButton6.setForeground(new java.awt.Color(0, 51, 255));
-    jButton6.setText(bundle.getString("CTModerator.jButton6.text")); 
-    jButton6.setOpaque(false);
-    jButton6.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton6ActionPerformed(evt);
-      }
-    });
-    jPanel7.add(jButton6);
-    jButton6.setBounds(140, 280, 310, 23);
-
-    jButton19.setForeground(new java.awt.Color(0, 51, 255));
-    jButton19.setText(bundle.getString("CTModerator.jButton19.text")); 
-    jButton19.setOpaque(false);
-    jButton19.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton19ActionPerformed(evt);
-      }
-    });
-    jPanel7.add(jButton19);
-    jButton19.setBounds(470, 280, 90, 23);
-
-    jCheckBox19.setSelected(true);
-    jCheckBox19.setText(bundle.getString("CTModerator.jCheckBox19.text")); 
-    jCheckBox19.setOpaque(false);
-    jPanel7.add(jCheckBox19);
-    jCheckBox19.setBounds(50, 210, 200, 23);
-
-    jCheckBox20.setSelected(true);
-    jCheckBox20.setText(bundle.getString("CTModerator.jCheckBox20.text")); 
-    jCheckBox20.setOpaque(false);
-    jPanel7.add(jCheckBox20);
-    jCheckBox20.setBounds(260, 210, 230, 23);
-
-    jButton25.setText(bundle.getString("CTModerator.jButton25.text")); 
-    jButton25.setActionCommand(bundle.getString("CTModerator.jButton25.actionCommand")); 
-    jButton25.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton25ActionPerformed(evt);
-      }
-    });
-    jPanel7.add(jButton25);
-    jButton25.setBounds(500, 210, 90, 23);
-
-    jPanel20.setBackground(new java.awt.Color(0, 51, 204));
-    jPanel20.setLayout(null);
-
-    jPanel32.setOpaque(false);
-    jPanel32.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel39.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel39.setText(bundle.getString("CTModerator.jLabel39.text")); 
-    jPanel32.add(jLabel39);
-
-    jCheckBox15.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox15.setText(bundle.getString("CTModerator.jCheckBox15.text")); 
-    jCheckBox15.setOpaque(false);
-    jPanel32.add(jCheckBox15);
-
-    jCheckBox16.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox16.setText(bundle.getString("CTModerator.jCheckBox16.text")); 
-    jCheckBox16.setOpaque(false);
-    jCheckBox16.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox16ActionPerformed(evt);
-      }
-    });
-    jPanel32.add(jCheckBox16);
-
-    jButton24.setText(bundle.getString("CTModerator.jButton24.text")); 
-    jButton24.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton24ActionPerformed(evt);
-      }
-    });
-    jPanel32.add(jButton24);
-
-    jButton26.setText(bundle.getString("CTModerator.jButton26.text")); 
-    jButton26.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton26ActionPerformed(evt);
-      }
-    });
-    jPanel32.add(jButton26);
-
-    jPanel20.add(jPanel32);
-    jPanel32.setBounds(20, 60, 790, 40);
-
-    jPanel46.setOpaque(false);
-    jPanel46.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel6.setText(bundle.getString("CTModerator.jLabel6.text")); 
-    jPanel46.add(jLabel6);
-
-    jCheckBox11.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox11.setText(bundle.getString("CTModerator.jCheckBox11.text_1")); 
-    jCheckBox11.setOpaque(false);
-    jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox11ActionPerformed(evt);
-      }
-    });
-    jPanel46.add(jCheckBox11);
-
-    jCheckBox12.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox12.setText(bundle.getString("CTModerator.jCheckBox12.text")); 
-    jCheckBox12.setOpaque(false);
-    jCheckBox12.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox12ActionPerformed(evt);
-      }
-    });
-    jPanel46.add(jCheckBox12);
-
-    jPanel20.add(jPanel46);
-    jPanel46.setBounds(20, 10, 1010, 40);
-
-    jPanel7.add(jPanel20);
-    jPanel20.setBounds(20, 70, 1050, 110);
-
-    jLabel43.setText(bundle.getString("CTModerator.jLabel43.text")); 
-    jPanel7.add(jLabel43);
-    jLabel43.setBounds(40, 260, 160, 15);
-
-    jButton34.setText(bundle.getString("CTModerator.jButton34.text")); 
-    jButton34.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton34ActionPerformed(evt);
-      }
-    });
-    jPanel7.add(jButton34);
-    jButton34.setBounds(140, 320, 310, 23);
-
-    jPanel21.setBackground(new java.awt.Color(255, 204, 204));
-    jPanel7.add(jPanel21);
-    jPanel21.setBounds(20, 250, 1050, 100);
-
-    jLabel41.setText(bundle.getString("CTModerator.jLabel41.text")); 
-    jPanel7.add(jLabel41);
-    jLabel41.setBounds(40, 190, 210, 15);
-
-    jPanel22.setBackground(new java.awt.Color(255, 255, 204));
-    jPanel7.add(jPanel22);
-    jPanel22.setBounds(20, 180, 1050, 70);
-
-    jTabbedPane2.addTab(bundle.getString("CTModerator.jPanel7.TabConstraints.tabTitle"), jPanel7); 
-
-    jPanel26.setLayout(null);
-
-    jPanel26.add(cbb_moderatorFList);
-    cbb_moderatorFList.setBounds(90, 20, 170, 21);
-
-    jLabel46.setText(bundle.getString("CTModerator.jLabel46.text")); 
-    jPanel26.add(jLabel46);
-    jLabel46.setBounds(30, 20, 50, 20);
-
-    jPanel27.setBackground(new java.awt.Color(0, 51, 204));
-    jPanel27.setLayout(null);
-
-    jPanel30.setOpaque(false);
-    jPanel30.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel47.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel47.setText(bundle.getString("CTModerator.jLabel47.text")); 
-    jPanel30.add(jLabel47);
-
-    jCheckBox22.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox22.setText(bundle.getString("CTModerator.jCheckBox22.text")); 
-    jCheckBox22.setOpaque(false);
-    jCheckBox22.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox22ActionPerformed(evt);
-      }
-    });
-    jPanel30.add(jCheckBox22);
-
-    jCheckBox23.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox23.setText(bundle.getString("CTModerator.jCheckBox23.text")); 
-    jCheckBox23.setOpaque(false);
-    jCheckBox23.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox23ActionPerformed(evt);
-      }
-    });
-    jPanel30.add(jCheckBox23);
-
-    jButton35.setText(bundle.getString("CTModerator.jButton35.text")); 
-    jButton35.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton35ActionPerformed(evt);
-      }
-    });
-    jPanel30.add(jButton35);
-
-    jPanel27.add(jPanel30);
-    jPanel30.setBounds(20, 54, 800, 40);
-
-    jPanel47.setOpaque(false);
-    jPanel47.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel10.setText(bundle.getString("CTModerator.jLabel10.text")); 
-    jPanel47.add(jLabel10);
-
-    jCheckBox17.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox17.setText(bundle.getString("CTModerator.jCheckBox17.text")); 
-    jCheckBox17.setOpaque(false);
-    jCheckBox17.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox17ActionPerformed(evt);
-      }
-    });
-    jPanel47.add(jCheckBox17);
-
-    jCheckBox18.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox18.setText(bundle.getString("CTModerator.jCheckBox18.text")); 
-    jCheckBox18.setOpaque(false);
-    jCheckBox18.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox18ActionPerformed(evt);
-      }
-    });
-    jPanel47.add(jCheckBox18);
-
-    jPanel27.add(jPanel47);
-    jPanel47.setBounds(20, 10, 830, 40);
-
-    jPanel26.add(jPanel27);
-    jPanel27.setBounds(10, 60, 890, 100);
-
-    jPanel49.setBackground(new java.awt.Color(255, 255, 204));
-    jPanel26.add(jPanel49);
-    jPanel49.setBounds(10, 160, 890, 120);
-
-    jTabbedPane2.addTab(bundle.getString("CTModerator.jPanel26.TabConstraints.tabTitle"), jPanel26); 
-
-    jPanel2.setLayout(null);
-
-    jLabel24.setText(bundle.getString("CTModerator.jLabel24.text")); 
-    jPanel2.add(jLabel24);
-    jLabel24.setBounds(30, 20, 80, 20);
-
-    jPanel2.add(cbb_moderatorSkList);
-    cbb_moderatorSkList.setBounds(110, 20, 170, 21);
-
-    jPanel16.setBackground(new java.awt.Color(0, 51, 204));
-    jPanel16.setLayout(null);
-
-    jPanel28.setOpaque(false);
-    jPanel28.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel5.setText(bundle.getString("CTModerator.jLabel5.text")); 
-    jPanel28.add(jLabel5);
-
-    jCheckBox3.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox3.setText(bundle.getString("CTModerator.jCheckBox3.text")); 
-    jCheckBox3.setOpaque(false);
-    jPanel28.add(jCheckBox3);
-
-    jCheckBox4.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox4.setText(bundle.getString("CTModerator.jCheckBox4.text")); 
-    jCheckBox4.setOpaque(false);
-    jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox4ActionPerformed(evt);
-      }
-    });
-    jPanel28.add(jCheckBox4);
-
-    jButton8.setText(bundle.getString("CTModerator.jButton8.text")); 
-    jButton8.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton8ActionPerformed(evt);
-      }
-    });
-    jPanel28.add(jButton8);
-
-    jButton13.setText(bundle.getString("CTModerator.jButton13.text")); 
-    jButton13.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton13ActionPerformed(evt);
-      }
-    });
-    jPanel28.add(jButton13);
-
-    jPanel16.add(jPanel28);
-    jPanel28.setBounds(10, 50, 820, 40);
-
-    jPanel48.setOpaque(false);
-    jPanel48.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel11.setText(bundle.getString("CTModerator.jLabel11.text")); 
-    jPanel48.add(jLabel11);
-
-    jCheckBox21.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox21.setText(bundle.getString("CTModerator.jCheckBox21.text_1")); 
-    jCheckBox21.setOpaque(false);
-    jCheckBox21.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox21ActionPerformed(evt);
-      }
-    });
-    jPanel48.add(jCheckBox21);
-
-    jCheckBox24.setForeground(new java.awt.Color(255, 255, 255));
-    jCheckBox24.setText(bundle.getString("CTModerator.jCheckBox24.text")); 
-    jCheckBox24.setOpaque(false);
-    jCheckBox24.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox24ActionPerformed(evt);
-      }
-    });
-    jPanel48.add(jCheckBox24);
-
-    jPanel16.add(jPanel48);
-    jPanel48.setBounds(10, 10, 780, 40);
-
-    jPanel2.add(jPanel16);
-    jPanel16.setBounds(10, 50, 890, 100);
-
-    jPanel17.setBackground(new java.awt.Color(255, 255, 204));
-    jPanel2.add(jPanel17);
-    jPanel17.setBounds(10, 150, 890, 130);
-
-    jTabbedPane2.addTab(bundle.getString("CTModerator.jPanel2.TabConstraints.tabTitle"), jPanel2); 
-
-    jPanel5.setLayout(null);
-
-    jLabel26.setText(bundle.getString("CTModerator.jLabel26.text")); 
-    jPanel5.add(jLabel26);
-    jLabel26.setBounds(30, 20, 70, 20);
-
-    cbb_moderatorPermissionList.addItemListener(new java.awt.event.ItemListener() {
-      public void itemStateChanged(java.awt.event.ItemEvent evt) {
-        cbb_moderatorPermissionListItemStateChanged(evt);
-      }
-    });
-    jPanel5.add(cbb_moderatorPermissionList);
-    cbb_moderatorPermissionList.setBounds(110, 20, 160, 21);
-
-    jPanel23.setBackground(new java.awt.Color(204, 204, 255));
-    jPanel23.setLayout(null);
-
-    jPanel38.setOpaque(false);
-    jPanel38.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel17.setText(bundle.getString("CTModerator.jLabel17.text")); 
-    jPanel38.add(jLabel17);
-
-    cbSlideAu1.setText(bundle.getString("CTModerator.cbSlideAu1.text")); 
-    cbSlideAu1.setOpaque(false);
-    cbSlideAu1.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cbSlideAu1ActionPerformed(evt);
-      }
-    });
-    jPanel38.add(cbSlideAu1);
-
-    cbSlideAu2.setText(bundle.getString("CTModerator.jCheckBox21.text")); 
-    cbSlideAu2.setOpaque(false);
-    cbSlideAu2.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cbSlideAu2ActionPerformed(evt);
-      }
-    });
-    jPanel38.add(cbSlideAu2);
-
-    jPanel23.add(jPanel38);
-    jPanel38.setBounds(10, 20, 810, 40);
-
-    jPanel39.setOpaque(false);
-    jPanel39.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel14.setText(bundle.getString("CTModerator.jLabel14.text")); 
-    jPanel39.add(jLabel14);
-
-    cbSketchAu1.setText(bundle.getString("CTModerator.cbSketchAu1.text")); 
-    cbSketchAu1.setOpaque(false);
-    cbSketchAu1.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cbSketchAu1ActionPerformed(evt);
-      }
-    });
-    jPanel39.add(cbSketchAu1);
-
-    cbSketchAu2.setText(bundle.getString("CTModerator.cbSketchAu2.text")); 
-    cbSketchAu2.setToolTipText(bundle.getString("CTModerator.cbSketchAu2.toolTipText")); 
-    cbSketchAu2.setOpaque(false);
-    cbSketchAu2.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cbSketchAu2ActionPerformed(evt);
-      }
-    });
-    jPanel39.add(cbSketchAu2);
-
-    jPanel23.add(jPanel39);
-    jPanel39.setBounds(10, 60, 780, 30);
-
-    jPanel40.setOpaque(false);
-    jPanel40.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel15.setText(bundle.getString("CTModerator.jLabel15.text")); 
-    jPanel40.add(jLabel15);
-
-    cbMsgAu1.setText(bundle.getString("CTModerator.cbMsgAu1.text")); 
-    cbMsgAu1.setOpaque(false);
-    jPanel40.add(cbMsgAu1);
-
-    cbMsgAu2.setText(bundle.getString("CTModerator.jCheckBox11.text")); 
-    cbMsgAu2.setOpaque(false);
-    jPanel40.add(cbMsgAu2);
-
-    jPanel23.add(jPanel40);
-    jPanel40.setBounds(10, 97, 780, 33);
-
-    jPanel41.setOpaque(false);
-    jPanel41.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel33.setText(bundle.getString("CTModerator.jLabel33.text")); 
-    jPanel41.add(jLabel33);
-
-    cbSrnAu1.setText(bundle.getString("CTModerator.cbSrnAu1.text")); 
-    cbSrnAu1.setOpaque(false);
-    jPanel41.add(cbSrnAu1);
-
-    cbSrnAu2.setText(bundle.getString("CTModerator.cbSrnAu2.text")); 
-    cbSrnAu2.setOpaque(false);
-    jPanel41.add(cbSrnAu2);
-
-    jPanel23.add(jPanel41);
-    jPanel41.setBounds(10, 140, 800, 40);
-
-    jPanel43.setOpaque(false);
-    jPanel43.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel18.setText(bundle.getString("CTModerator.jLabel18.text")); 
-    jPanel43.add(jLabel18);
-
-    cbOpenWebAu.setText(bundle.getString("CTModerator.cbOpenWebAu.text")); 
-    cbOpenWebAu.setOpaque(false);
-    jPanel43.add(cbOpenWebAu);
-
-    jPanel23.add(jPanel43);
-    jPanel43.setBounds(10, 220, 510, 40);
-
-    jButton10.setText(bundle.getString("CTModerator.jButton10.text")); 
-    jButton10.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton10ActionPerformed(evt);
-      }
-    });
-    jPanel23.add(jButton10);
-    jButton10.setBounds(540, 220, 90, 30);
-
-    jPanel44.setOpaque(false);
-    jPanel44.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel28.setText(bundle.getString("CTModerator.jLabel28.text")); 
-    jPanel44.add(jLabel28);
-
-    cbFileAu1.setText(bundle.getString("CTModerator.cbFileAu1.text")); 
-    cbFileAu1.setOpaque(false);
-    cbFileAu1.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cbFileAu1ActionPerformed(evt);
-      }
-    });
-    jPanel44.add(cbFileAu1);
-
-    cbFileAu2.setText(bundle.getString("CTModerator.cbFileAu2.text")); 
-    cbFileAu2.setOpaque(false);
-    cbFileAu2.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cbFileAu2ActionPerformed(evt);
-      }
-    });
-    jPanel44.add(cbFileAu2);
-
-    jPanel23.add(jPanel44);
-    jPanel44.setBounds(10, 180, 790, 40);
-
-    jPanel5.add(jPanel23);
-    jPanel23.setBounds(20, 60, 870, 280);
-
-    jPanel25.setBackground(new java.awt.Color(204, 255, 204));
-    jPanel25.setLayout(null);
-
-    jPanel8.setOpaque(false);
-    jPanel8.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel44.setText(bundle.getString("CTModerator.jLabel44.text")); 
-    jPanel8.add(jLabel44);
-
-    jButton40.setText(bundle.getString("CTModerator.jButton40.text")); 
-    jButton40.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton40ActionPerformed(evt);
-      }
-    });
-    jPanel8.add(jButton40);
-
-    jButton21.setText(bundle.getString("CTModerator.jButton21.text")); 
-    jButton21.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton21ActionPerformed(evt);
-      }
-    });
-    jPanel8.add(jButton21);
-
-    jPanel25.add(jPanel8);
-    jPanel8.setBounds(10, 10, 790, 40);
-
-    jPanel5.add(jPanel25);
-    jPanel25.setBounds(20, 340, 870, 60);
-
-    jTabbedPane2.addTab(bundle.getString("CTModerator.jPanel5.TabConstraints.tabTitle"), jPanel5); 
-
-    jPanel4.setLayout(null);
-
-    jLabel19.setText(bundle.getString("CTModerator.jLabel19.text")); 
-    jPanel4.add(jLabel19);
-    jLabel19.setBounds(30, 90, 140, 20);
-    jPanel4.add(jTextField5);
-    jTextField5.setBounds(170, 90, 410, 21);
-
-    jButton12.setText(bundle.getString("CTModerator.jButton12.text")); 
-    jButton12.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton12ActionPerformed(evt);
-      }
-    });
-    jPanel4.add(jButton12);
-    jButton12.setBounds(590, 90, 80, 23);
-
-    jLabel22.setText(bundle.getString("CTModerator.jLabel22.text")); 
-    jPanel4.add(jLabel22);
-    jLabel22.setBounds(20, 30, 60, 20);
-
-    jPanel4.add(cbb_moderatorElseList);
-    cbb_moderatorElseList.setBounds(80, 30, 170, 21);
-
-    jLabel34.setText(bundle.getString("CTModerator.jLabel34.text")); 
-    jPanel4.add(jLabel34);
-    jLabel34.setBounds(30, 140, 140, 20);
-    jPanel4.add(jTextField8);
-    jTextField8.setBounds(170, 140, 360, 21);
-
-    jPanel9.setBackground(new java.awt.Color(204, 255, 255));
-    jPanel4.add(jPanel9);
-    jPanel9.setBounds(20, 70, 1140, 60);
-
-    jButton27.setText(bundle.getString("CTModerator.jButton27.text")); 
-    jButton27.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton27ActionPerformed(evt);
-      }
-    });
-    jPanel4.add(jButton27);
-    jButton27.setBounds(590, 170, 80, 23);
-
-    jLabel35.setText(bundle.getString("CTModerator.jLabel35.text")); 
-    jPanel4.add(jLabel35);
-    jLabel35.setBounds(110, 170, 100, 20);
-    jPanel4.add(jTextField9);
-    jTextField9.setBounds(220, 170, 360, 21);
-
-    jPanel10.setBackground(new java.awt.Color(255, 204, 204));
-    jPanel4.add(jPanel10);
-    jPanel10.setBounds(20, 130, 1140, 80);
-
-    jLabel42.setText(bundle.getString("CTModerator.jLabel42.text")); 
-    jPanel4.add(jLabel42);
-    jLabel42.setBounds(30, 220, 160, 15);
-
-    jPanel11.setBackground(new java.awt.Color(255, 255, 204));
-    jPanel11.setLayout(null);
-
-    jPanel35.setOpaque(false);
-    jPanel35.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jButton28.setText(bundle.getString("CTModerator.jButton28.text")); 
-    jButton28.setToolTipText(bundle.getString("CTModerator.jButton28.toolTipText")); 
-    jButton28.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton28ActionPerformed(evt);
-      }
-    });
-    jPanel35.add(jButton28);
-
-    jButton36.setText(bundle.getString("CTModerator.jButton36.text")); 
-    jButton36.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton36ActionPerformed(evt);
-      }
-    });
-    jPanel35.add(jButton36);
-
-    jPanel11.add(jPanel35);
-    jPanel35.setBounds(10, 30, 620, 40);
-
-    jPanel37.setOpaque(false);
-    jPanel37.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jButton32.setText(bundle.getString("CTModerator.jButton32.text")); 
-    jButton32.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton32ActionPerformed(evt);
-      }
-    });
-    jPanel37.add(jButton32);
-
-    jButton33.setText(bundle.getString("CTModerator.jButton33.text")); 
-    jButton33.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton33ActionPerformed(evt);
-      }
-    });
-    jPanel37.add(jButton33);
-
-    jButton15.setText(bundle.getString("CTModerator.jButton15.text")); 
-    jButton15.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton15ActionPerformed(evt);
-      }
-    });
-    jPanel37.add(jButton15);
-
-    jButton16.setText(bundle.getString("CTModerator.jButton16.text")); 
-    jButton16.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton16ActionPerformed(evt);
-      }
-    });
-    jPanel37.add(jButton16);
-
-    jPanel11.add(jPanel37);
-    jPanel37.setBounds(10, 70, 970, 40);
-
-    jPanel4.add(jPanel11);
-    jPanel11.setBounds(20, 210, 1140, 130);
-
-    jTabbedPane2.addTab(bundle.getString("CTModerator.jPanel4.TabConstraints.tabTitle"), jPanel4); 
-
-    moderatorPanel.add(jTabbedPane2, java.awt.BorderLayout.CENTER);
-
-    jTabbedPane1.addTab(bundle.getString("CTModerator.moderatorPanel.TabConstraints.tabTitle"), moderatorPanel); 
-
-    statusPanel.setLayout(new java.awt.BorderLayout());
-
-    jTextArea2.setColumns(20);
-    jTextArea2.setLineWrap(true);
-    jTextArea2.setRows(5);
-    jScrollPane2.setViewportView(jTextArea2);
-
-    statusPanel.add(jScrollPane2, java.awt.BorderLayout.CENTER);
-    statusPanel.add(jTextField4, java.awt.BorderLayout.PAGE_END);
-
-    status_upperPanel.setBackground(new java.awt.Color(102, 102, 102));
-    status_upperPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-    jLabel36.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel36.setText(bundle.getString("CTModerator.jLabel36.text")); 
-    status_upperPanel.add(jLabel36);
-
-    status_upperPanel.add(cbb_moderatorStatusList);
-
-    jButton1.setText(bundle.getString("CTModerator.jButton1.text")); 
-    jButton1.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton1ActionPerformed(evt);
-      }
-    });
-    status_upperPanel.add(jButton1);
-
-    jButton41.setText(bundle.getString("CTModerator.jButton41.text")); 
-    jButton41.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton41ActionPerformed(evt);
-      }
-    });
-    status_upperPanel.add(jButton41);
-
-    jButton42.setText(bundle.getString("CTModerator.jButton42.text")); 
-    jButton42.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton42ActionPerformed(evt);
-      }
-    });
-    status_upperPanel.add(jButton42);
-
-    jButton3.setText(bundle.getString("CTModerator.jButton3.text")); 
-    jButton3.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton3ActionPerformed(evt);
-      }
-    });
-    status_upperPanel.add(jButton3);
-
-    jButton31.setText(bundle.getString("CTModerator.jButton31.text")); 
-    jButton31.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton31ActionPerformed(evt);
-      }
-    });
-    status_upperPanel.add(jButton31);
-
-    jButton17.setText(bundle.getString("CTModerator.jButton17.text")); 
-    jButton17.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton17ActionPerformed(evt);
-      }
-    });
-    status_upperPanel.add(jButton17);
-
-    status_checkBox1.setForeground(new java.awt.Color(255, 255, 255));
-    status_checkBox1.setText(bundle.getString("CTModerator.status_checkBox1.text")); 
-    status_checkBox1.setOpaque(false);
-    status_upperPanel.add(status_checkBox1);
-
-    statusPanel.add(status_upperPanel, java.awt.BorderLayout.NORTH);
-
-    jTabbedPane1.addTab(bundle.getString("CTModerator.statusPanel.TabConstraints.tabTitle"), statusPanel); 
-
-    getContentPane().add(jTabbedPane1, java.awt.BorderLayout.CENTER);
-
-    jMenu1.setText(bundle.getString("CTModerator.jMenu1.text")); 
-    jMenu1.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenu1ActionPerformed(evt);
-      }
-    });
-
-    jMenuItem5.setText(bundle.getString("CTModerator.jMenuItem5.text")); 
-    jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem5ActionPerformed(evt);
-      }
-    });
-    jMenu1.add(jMenuItem5);
-
-    jMenuItem11.setText(bundle.getString("CTModerator.jMenuItem11.text")); 
-    jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem11ActionPerformed(evt);
-      }
-    });
-    jMenu1.add(jMenuItem11);
-
-    jMenuItem12.setText(bundle.getString("CTModerator.jMenuItem12.text")); 
-    jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem12ActionPerformed(evt);
-      }
-    });
-    jMenu1.add(jMenuItem12);
-
-    jMenuItem13.setText(bundle.getString("CTModerator.jMenuItem13.text")); 
-    jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem13ActionPerformed(evt);
-      }
-    });
-    jMenu1.add(jMenuItem13);
-
-    jMenuItem14.setText(bundle.getString("CTModerator.jMenuItem14.text")); 
-    jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem14ActionPerformed(evt);
-      }
-    });
-    jMenu1.add(jMenuItem14);
-
-    jMenuItem15.setText(bundle.getString("CTModerator.jMenuItem15.text")); 
-    jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem15ActionPerformed(evt);
-      }
-    });
-    jMenu1.add(jMenuItem15);
-
-    jMenuItem16.setText(bundle.getString("CTModerator.jMenuItem16.text")); 
-    jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem16ActionPerformed(evt);
-      }
-    });
-    jMenu1.add(jMenuItem16);
-
-    jMenuItem1.setText(bundle.getString("CTModerator.jMenuItem1.text")); 
-    jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem1ActionPerformed(evt);
-      }
-    });
-    jMenu1.add(jMenuItem1);
-
-    jMenuBar1.add(jMenu1);
-
-    jMenu2.setText(bundle.getString("CTModerator.jMenu2.text")); 
-
-    jMenuItem3.setText(bundle.getString("CTModerator.jMenuItem3.text")); 
-    jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem3ActionPerformed(evt);
-      }
-    });
-    jMenu2.add(jMenuItem3);
-
-    jMenuBar1.add(jMenu2);
-
-    jMenu3.setText(bundle.getString("CTModerator.jMenu3.text")); 
-    jMenu3.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenu3ActionPerformed(evt);
-      }
-    });
-
-    jMenuItem8.setText(bundle.getString("CTModerator.jMenuItem8.text")); 
-    jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem8ActionPerformed(evt);
-      }
-    });
-    jMenu3.add(jMenuItem8);
-
-    jMenuItem7.setText(bundle.getString("CTModerator.jMenuItem7.text")); 
-    jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem7ActionPerformed(evt);
-      }
-    });
-    jMenu3.add(jMenuItem7);
-
-    jMenuItem17.setText(bundle.getString("CTModerator.jMenuItem17.text")); 
-    jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem17ActionPerformed(evt);
-      }
-    });
-    jMenu3.add(jMenuItem17);
-
-    jMenuItem6.setText(bundle.getString("CTModerator.jMenuItem6.text")); 
-    jMenu3.add(jMenuItem6);
-
-    jMenuItem4.setText(bundle.getString("CTModerator.jMenuItem4.text")); 
-    jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem4ActionPerformed(evt);
-      }
-    });
-    jMenu3.add(jMenuItem4);
-
-    jMenuItem10.setText(bundle.getString("CTModerator.jMenuItem10.text")); 
-    jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem10ActionPerformed(evt);
-      }
-    });
-    jMenu3.add(jMenuItem10);
-
-    jMenuItem9.setText(bundle.getString("CTModerator.jMenuItem9.text")); 
-    jMenu3.add(jMenuItem9);
-
-    jMenuItem2.setText(bundle.getString("CTModerator.jMenuItem2.text")); 
-    jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jMenuItem2ActionPerformed(evt);
-      }
-    });
-    jMenu3.add(jMenuItem2);
-
-    jMenuBar1.add(jMenu3);
-
-    setJMenuBar(jMenuBar1);
-
-    pack();
-  }
+    private void initComponents() {
+
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup6 = new javax.swing.ButtonGroup();
+        buttonGroup7 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup8 = new javax.swing.ButtonGroup();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        slidePanel = new javax.swing.JPanel();
+        sld_upperPanel1 = new javax.swing.JPanel();
+        sld_upperPanel2 = new javax.swing.JPanel();
+        jButton39 = new javax.swing.JButton();
+        btn_openSld = new javax.swing.JButton();
+        cbb_slide = new javax.swing.JComboBox();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        cbb_sldMList = new javax.swing.JComboBox();
+        jPanel52 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        cbb_slideInx = new javax.swing.JComboBox();
+        jLabel20 = new javax.swing.JLabel();
+        jButton38 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        msgPanel = new javax.swing.JPanel();
+        msg_TabbedPane = new javax.swing.JTabbedPane();
+        msg_panel1 = new javax.swing.JPanel();
+        msg_scrollPane = new javax.swing.JScrollPane();
+        msg_textPane = new javax.swing.JTextPane(msg_styleDoc);
+        msg_upperPanel = new javax.swing.JPanel();
+        msg_btnSaveAs = new javax.swing.JButton();
+        msg_btnClear = new javax.swing.JButton();
+        msg_btnPlus = new javax.swing.JButton();
+        msg_btnMinus = new javax.swing.JButton();
+        jLabel31 = new javax.swing.JLabel();
+        Color[] colors={Color.white,Color.red,Color.blue,Color.green,Color.BLACK,Color.CYAN,Color.DARK_GRAY,Color.LIGHT_GRAY,Color.MAGENTA,Color.ORANGE,Color.PINK,Color.YELLOW};
+        jComboBox2 = new javax.swing.JComboBox();
+        msg_checkBox1 = new javax.swing.JCheckBox();
+        msg_panel2 = new javax.swing.JPanel();
+        msg_scrollPane2 = new javax.swing.JScrollPane();
+        msg_textArea1 = new javax.swing.JTextArea();
+        msg_draft_upperPanel = new javax.swing.JPanel();
+        msg_button10 = new javax.swing.JButton();
+        msg_button9 = new javax.swing.JButton();
+        msg_button8 = new javax.swing.JButton();
+        msg_button7 = new javax.swing.JButton();
+        msg_lowerPanel = new javax.swing.JPanel();
+        jPanel51 = new javax.swing.JPanel();
+        msg_textField1 = new javax.swing.JTextField();
+        msg_panel7 = new javax.swing.JPanel();
+        msg_label1 = new javax.swing.JLabel();
+        jPanel53 = new javax.swing.JPanel();
+        msg_panel5 = new javax.swing.JPanel();
+        jCheckBox14 = new javax.swing.JCheckBox();
+        jCheckBox13 = new javax.swing.JCheckBox();
+        jLabel27 = new javax.swing.JLabel();
+        Color[] colors2={Color.white,Color.red,Color.blue,Color.green,Color.BLACK,Color.CYAN,Color.DARK_GRAY,Color.LIGHT_GRAY,Color.MAGENTA,Color.ORANGE,Color.PINK,Color.YELLOW};
+        jComboBox7 = new javax.swing.JComboBox();
+        msg_btn_sendMsg = new javax.swing.JButton();
+        msg_btnSendDraft = new javax.swing.JButton();
+        msg_btnSendClear = new javax.swing.JButton();
+        msg_label2 = new javax.swing.JLabel();
+        cbb_msgMList = new javax.swing.JComboBox();
+        screenPanel = new javax.swing.JPanel();
+        srn_upperPanel = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        cbb_srnMList = new javax.swing.JComboBox();
+        btn_srnStart = new javax.swing.JButton();
+        rb_srnMonitor = new javax.swing.JRadioButton();
+        rb_srnControlAndImage = new javax.swing.JRadioButton();
+        btn_srnRefresh = new javax.swing.JButton();
+        btn_srnACD = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        cb_srnFix = new javax.swing.JCheckBox();
+        srn_scrollPane1 = new javax.swing.JScrollPane();
+        filePanel = new javax.swing.JPanel();
+        f_panel1 = new javax.swing.JPanel();
+        f_panel6 = new javax.swing.JPanel();
+        f_panel20 = new javax.swing.JPanel();
+        btn_fResetLayout1 = new javax.swing.JButton();
+        btn_fRoot1 = new javax.swing.JButton();
+        f_checkBox1 = new javax.swing.JCheckBox();
+        f_panel21 = new javax.swing.JPanel();
+        f_label1 = new javax.swing.JLabel();
+        cbb_fList1 = new javax.swing.JComboBox();
+        f_panel7 = new javax.swing.JPanel();
+        f_panel2 = new javax.swing.JPanel();
+        jPanel29 = new javax.swing.JPanel();
+        f_panel22 = new javax.swing.JPanel();
+        btn_fResetLayout2 = new javax.swing.JButton();
+        btn_fRoot2 = new javax.swing.JButton();
+        f_panel23 = new javax.swing.JPanel();
+        f_label2 = new javax.swing.JLabel();
+        cbb_fMlist = new javax.swing.JComboBox();
+        cbb_fList2 = new javax.swing.JComboBox();
+        jPanel31 = new javax.swing.JPanel();
+        f_panel3 = new javax.swing.JPanel();
+        f_scrollPane6 = new javax.swing.JScrollPane();
+        f_table1 = new javax.swing.JTable();
+        f_panel4 = new javax.swing.JPanel();
+        f_scrollPane7 = new javax.swing.JScrollPane();
+        f_table2 = new javax.swing.JTable();
+        f_panel5 = new javax.swing.JPanel();
+        f_tabbedPane1 = new javax.swing.JTabbedPane();
+        f_panel18 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jPanel33 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        f_panel10 = new javax.swing.JPanel();
+        f_panel11 = new javax.swing.JPanel();
+        f_panel12 = new javax.swing.JPanel();
+        f_panel13 = new javax.swing.JPanel();
+        sketchPanel = new javax.swing.JPanel();
+        sk_upperPanel = new javax.swing.JPanel();
+        jPanel55 = new javax.swing.JPanel();
+        jButton4 = new javax.swing.JButton();
+        jLabel37 = new javax.swing.JLabel();
+        Color[] colors4={Color.white,Color.red,Color.blue,Color.green,Color.BLACK,Color.CYAN,Color.DARK_GRAY,Color.LIGHT_GRAY,Color.MAGENTA,Color.ORANGE,Color.PINK,Color.YELLOW};
+        jComboBox3 = new javax.swing.JComboBox();
+        jLabel16 = new javax.swing.JLabel();
+        Color[] colors3={Color.white,Color.red,Color.blue,Color.green,Color.BLACK,Color.CYAN,Color.DARK_GRAY,Color.LIGHT_GRAY,Color.MAGENTA,Color.ORANGE,Color.PINK,Color.YELLOW};
+        jComboBox1 = new javax.swing.JComboBox();
+        jLabel40 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox();
+        jLabel48 = new javax.swing.JLabel();
+        jPanel54 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        cbb_skMList = new javax.swing.JComboBox();
+        clear = new javax.swing.JButton();
+        moderatorPanel = new javax.swing.JPanel();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        cbb_moderatorSldList = new javax.swing.JComboBox();
+        jLabel23 = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
+        jPanel36 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jButton7 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jPanel42 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jCheckBox5 = new javax.swing.JCheckBox();
+        jCheckBox8 = new javax.swing.JCheckBox();
+        jPanel12 = new javax.swing.JPanel();
+        jPanel50 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jButton9 = new javax.swing.JButton();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel29 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel30 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        btnReload = new javax.swing.JButton();
+        jPanel24 = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel45 = new javax.swing.JLabel();
+        jButton30 = new javax.swing.JButton();
+        jButton29 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        cbb_moderatorMsgList = new javax.swing.JComboBox();
+        jPanel18 = new javax.swing.JPanel();
+        jPanel34 = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        jCheckBox6 = new javax.swing.JCheckBox();
+        jCheckBox7 = new javax.swing.JCheckBox();
+        jButton18 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jPanel45 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jCheckBox9 = new javax.swing.JCheckBox();
+        jCheckBox10 = new javax.swing.JCheckBox();
+        jPanel19 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel32 = new javax.swing.JLabel();
+        cbb_moderatorSrnList = new javax.swing.JComboBox();
+        jButton6 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jCheckBox19 = new javax.swing.JCheckBox();
+        jCheckBox20 = new javax.swing.JCheckBox();
+        jButton25 = new javax.swing.JButton();
+        jPanel20 = new javax.swing.JPanel();
+        jPanel32 = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jCheckBox15 = new javax.swing.JCheckBox();
+        jCheckBox16 = new javax.swing.JCheckBox();
+        jButton24 = new javax.swing.JButton();
+        jButton26 = new javax.swing.JButton();
+        jPanel46 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jCheckBox11 = new javax.swing.JCheckBox();
+        jCheckBox12 = new javax.swing.JCheckBox();
+        jLabel43 = new javax.swing.JLabel();
+        jButton34 = new javax.swing.JButton();
+        jPanel21 = new javax.swing.JPanel();
+        jLabel41 = new javax.swing.JLabel();
+        jPanel22 = new javax.swing.JPanel();
+        jPanel26 = new javax.swing.JPanel();
+        cbb_moderatorFList = new javax.swing.JComboBox();
+        jLabel46 = new javax.swing.JLabel();
+        jPanel27 = new javax.swing.JPanel();
+        jPanel30 = new javax.swing.JPanel();
+        jLabel47 = new javax.swing.JLabel();
+        jCheckBox22 = new javax.swing.JCheckBox();
+        jCheckBox23 = new javax.swing.JCheckBox();
+        jButton35 = new javax.swing.JButton();
+        jPanel47 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jCheckBox17 = new javax.swing.JCheckBox();
+        jCheckBox18 = new javax.swing.JCheckBox();
+        jPanel49 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        cbb_moderatorSkList = new javax.swing.JComboBox();
+        jPanel16 = new javax.swing.JPanel();
+        jPanel28 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox4 = new javax.swing.JCheckBox();
+        jButton8 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jPanel48 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jCheckBox21 = new javax.swing.JCheckBox();
+        jCheckBox24 = new javax.swing.JCheckBox();
+        jPanel17 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        cbb_moderatorPermissionList = new javax.swing.JComboBox();
+        jPanel23 = new javax.swing.JPanel();
+        jPanel38 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        cbSlideAu1 = new javax.swing.JCheckBox();
+        cbSlideAu2 = new javax.swing.JCheckBox();
+        jPanel39 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        cbSketchAu1 = new javax.swing.JCheckBox();
+        cbSketchAu2 = new javax.swing.JCheckBox();
+        jPanel40 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        cbMsgAu1 = new javax.swing.JCheckBox();
+        cbMsgAu2 = new javax.swing.JCheckBox();
+        jPanel41 = new javax.swing.JPanel();
+        jLabel33 = new javax.swing.JLabel();
+        cbSrnAu1 = new javax.swing.JCheckBox();
+        cbSrnAu2 = new javax.swing.JCheckBox();
+        jPanel43 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        cbOpenWebAu = new javax.swing.JCheckBox();
+        jButton10 = new javax.swing.JButton();
+        jPanel44 = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        cbFileAu1 = new javax.swing.JCheckBox();
+        cbFileAu2 = new javax.swing.JCheckBox();
+        jPanel25 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel44 = new javax.swing.JLabel();
+        jButton40 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jButton12 = new javax.swing.JButton();
+        jLabel22 = new javax.swing.JLabel();
+        cbb_moderatorElseList = new javax.swing.JComboBox();
+        jLabel34 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jPanel9 = new javax.swing.JPanel();
+        jButton27 = new javax.swing.JButton();
+        jLabel35 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel42 = new javax.swing.JLabel();
+        jPanel11 = new javax.swing.JPanel();
+        jPanel35 = new javax.swing.JPanel();
+        jButton28 = new javax.swing.JButton();
+        jButton36 = new javax.swing.JButton();
+        jPanel37 = new javax.swing.JPanel();
+        jButton32 = new javax.swing.JButton();
+        jButton33 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        statusPanel = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jTextField4 = new javax.swing.JTextField();
+        status_upperPanel = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
+        cbb_moderatorStatusList = new javax.swing.JComboBox();
+        jButton1 = new javax.swing.JButton();
+        jButton41 = new javax.swing.JButton();
+        jButton42 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton31 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        status_checkBox1 = new javax.swing.JCheckBox();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
+        jMenuItem12 = new javax.swing.JMenuItem();
+        jMenuItem13 = new javax.swing.JMenuItem();
+        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItem15 = new javax.swing.JMenuItem();
+        jMenuItem16 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem17 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("ct/Bundle"); 
+        setTitle(bundle.getString("CTModerator.title")); 
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
+        addWindowStateListener(new java.awt.event.WindowStateListener() {
+            public void windowStateChanged(java.awt.event.WindowEvent evt) {
+                formWindowStateChanged(evt);
+            }
+        });
+
+        jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane1StateChanged(evt);
+            }
+        });
+
+        slidePanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                slidePanelMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                slidePanelMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                slidePanelMouseReleased(evt);
+            }
+        });
+        slidePanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                slidePanelMouseDragged(evt);
+            }
+        });
+        slidePanel.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                slidePanelKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                slidePanelKeyReleased(evt);
+            }
+        });
+        slidePanel.setLayout(new java.awt.BorderLayout());
+
+        sld_upperPanel1.setLayout(new java.awt.GridLayout(2, 1));
+
+        sld_upperPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        sld_upperPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jButton39.setText(bundle.getString("CTModerator.jButton39.text")); 
+        jButton39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton39ActionPerformed(evt);
+            }
+        });
+        sld_upperPanel2.add(jButton39);
+
+        btn_openSld.setText(bundle.getString("CTModerator.btn_openSld.text")); 
+        btn_openSld.setActionCommand(bundle.getString("CTModerator.btn_openSld.actionCommand")); 
+        btn_openSld.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_openSldActionPerformed(evt);
+            }
+        });
+        sld_upperPanel2.add(btn_openSld);
+
+        cbb_slide.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        sld_upperPanel2.add(cbb_slide);
+
+        jLabel12.setText(bundle.getString("CTModerator.jLabel12.text")); 
+        sld_upperPanel2.add(jLabel12);
+
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText(bundle.getString("CTModerator.jLabel9.text")); 
+        sld_upperPanel2.add(jLabel9);
+
+        cbb_sldMList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        sld_upperPanel2.add(cbb_sldMList);
+
+        sld_upperPanel1.add(sld_upperPanel2);
+
+        jPanel52.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel52.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText(bundle.getString("CTModerator.jLabel13.text")); 
+        jPanel52.add(jLabel13);
+
+        cbb_slideInx.setEditable(true);
+        cbb_slideInx.setPreferredSize(new java.awt.Dimension(60, 21));
+        cbb_slideInx.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cbb_slideInxItemStateChanged(evt);
+            }
+        });
+        cbb_slideInx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbb_slideInxActionPerformed(evt);
+            }
+        });
+        jPanel52.add(cbb_slideInx);
+
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText(bundle.getString("CTModerator.jLabel20.text")); 
+        jPanel52.add(jLabel20);
+
+        jButton38.setText(bundle.getString("CTModerator.jButton38.text")); 
+        jButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton38ActionPerformed(evt);
+            }
+        });
+        jPanel52.add(jButton38);
+
+        jButton2.setText(bundle.getString("CTModerator.jButton2.text")); 
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel52.add(jButton2);
+
+        jButton5.setText(bundle.getString("CTModerator.jButton5.text")); 
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel52.add(jButton5);
+
+        sld_upperPanel1.add(jPanel52);
+
+        slidePanel.add(sld_upperPanel1, java.awt.BorderLayout.NORTH);
+
+        jTabbedPane1.addTab(bundle.getString("CTModerator.slidePanel.TabConstraints.tabTitle"), slidePanel); 
+
+        msgPanel.setLayout(new java.awt.BorderLayout());
+
+        msg_panel1.setLayout(new java.awt.BorderLayout());
+
+        msg_scrollPane.setViewportView(msg_textPane);
+
+        msg_panel1.add(msg_scrollPane, java.awt.BorderLayout.CENTER);
+
+        msg_upperPanel.setBackground(new java.awt.Color(102, 102, 102));
+        msg_upperPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        msg_btnSaveAs.setText(bundle.getString("CTModerator.msg_btnSaveAs.text")); 
+        msg_btnSaveAs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                msg_btnSaveAsActionPerformed(evt);
+            }
+        });
+        msg_upperPanel.add(msg_btnSaveAs);
+
+        msg_btnClear.setText(bundle.getString("CTModerator.msg_btnClear.text")); 
+        msg_btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                msg_btnClearActionPerformed(evt);
+            }
+        });
+        msg_upperPanel.add(msg_btnClear);
+
+        msg_btnPlus.setText(bundle.getString("CTModerator.msg_btnPlus.text")); 
+        msg_btnPlus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                msg_btnPlusActionPerformed(evt);
+            }
+        });
+        msg_upperPanel.add(msg_btnPlus);
+
+        msg_btnMinus.setText(bundle.getString("CTModerator.msg_btnMinus.text")); 
+        msg_btnMinus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                msg_btnMinusActionPerformed(evt);
+            }
+        });
+        msg_upperPanel.add(msg_btnMinus);
+
+        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel31.setText(bundle.getString("CTModerator.jLabel31.text")); 
+        msg_upperPanel.add(jLabel31);
+
+        jComboBox2.setModel((new javax.swing.DefaultComboBoxModel(colors)));
+        jComboBox2.setRenderer(new MyCellRenderer());
+        jComboBox2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox2ItemStateChanged(evt);
+            }
+        });
+        msg_upperPanel.add(jComboBox2);
+
+        msg_checkBox1.setForeground(new java.awt.Color(255, 255, 255));
+        msg_checkBox1.setText(bundle.getString("CTModerator.msg_checkBox1.text")); 
+        msg_checkBox1.setOpaque(false);
+        msg_upperPanel.add(msg_checkBox1);
+
+        msg_panel1.add(msg_upperPanel, java.awt.BorderLayout.PAGE_START);
+
+        msg_TabbedPane.addTab(bundle.getString("CTModerator.msg_panel1.TabConstraints.tabTitle"), msg_panel1); 
+
+        msg_panel2.setLayout(new java.awt.BorderLayout());
+
+        msg_textArea1.setColumns(20);
+        msg_textArea1.setLineWrap(true);
+        msg_textArea1.setRows(5);
+        msg_scrollPane2.setViewportView(msg_textArea1);
+
+        msg_panel2.add(msg_scrollPane2, java.awt.BorderLayout.CENTER);
+
+        msg_draft_upperPanel.setBackground(new java.awt.Color(102, 102, 102));
+        msg_draft_upperPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        msg_button10.setText(bundle.getString("CTModerator.msg_button10.text")); 
+        msg_button10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                msg_button10ActionPerformed(evt);
+            }
+        });
+        msg_draft_upperPanel.add(msg_button10);
+
+        msg_button9.setText(bundle.getString("CTModerator.msg_button9.text")); 
+        msg_button9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                msg_button9ActionPerformed(evt);
+            }
+        });
+        msg_draft_upperPanel.add(msg_button9);
+
+        msg_button8.setText(bundle.getString("CTModerator.msg_button8.text")); 
+        msg_button8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                msg_button8ActionPerformed(evt);
+            }
+        });
+        msg_draft_upperPanel.add(msg_button8);
+
+        msg_button7.setText(bundle.getString("CTModerator.msg_button7.text")); 
+        msg_button7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                msg_button7ActionPerformed(evt);
+            }
+        });
+        msg_draft_upperPanel.add(msg_button7);
+
+        msg_panel2.add(msg_draft_upperPanel, java.awt.BorderLayout.PAGE_START);
+
+        msg_TabbedPane.addTab(bundle.getString("CTModerator.msg_panel2.TabConstraints.tabTitle"), msg_panel2); 
+
+        msgPanel.add(msg_TabbedPane, java.awt.BorderLayout.CENTER);
+
+        msg_lowerPanel.setLayout(new java.awt.GridLayout(2, 1));
+
+        jPanel51.setLayout(new java.awt.BorderLayout());
+
+        msg_textField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                msg_textField1ActionPerformed(evt);
+            }
+        });
+        jPanel51.add(msg_textField1, java.awt.BorderLayout.CENTER);
+
+        msg_panel7.setBackground(new java.awt.Color(102, 102, 102));
+
+        msg_label1.setForeground(new java.awt.Color(255, 255, 255));
+        msg_label1.setText(bundle.getString("CTModerator.msg_label1.text")); 
+        msg_panel7.add(msg_label1);
+
+        jPanel51.add(msg_panel7, java.awt.BorderLayout.WEST);
+
+        msg_lowerPanel.add(jPanel51);
+
+        jPanel53.setLayout(new java.awt.BorderLayout());
+
+        msg_panel5.setBackground(new java.awt.Color(102, 102, 102));
+
+        jCheckBox14.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox14.setText(bundle.getString("CTModerator.jCheckBox14.text")); 
+        jCheckBox14.setOpaque(false);
+        msg_panel5.add(jCheckBox14);
+
+        jCheckBox13.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox13.setText(bundle.getString("CTModerator.jCheckBox13.text")); 
+        jCheckBox13.setOpaque(false);
+        msg_panel5.add(jCheckBox13);
+
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel27.setText(bundle.getString("CTModerator.jLabel27.text")); 
+        msg_panel5.add(jLabel27);
+
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(colors2));
+        jComboBox7.setRenderer(new MyCellRenderer());
+        msg_panel5.add(jComboBox7);
+
+        msg_btn_sendMsg.setText(bundle.getString("CTModerator.msg_btn_sendMsg.text")); 
+        msg_btn_sendMsg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                msg_btn_sendMsgActionPerformed(evt);
+            }
+        });
+        msg_panel5.add(msg_btn_sendMsg);
+
+        msg_btnSendDraft.setText(bundle.getString("CTModerator.msg_btnSendDraft.text")); 
+        msg_btnSendDraft.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                msg_btnSendDraftActionPerformed(evt);
+            }
+        });
+        msg_panel5.add(msg_btnSendDraft);
+
+        msg_btnSendClear.setText(bundle.getString("CTModerator.msg_btnSendClear.text")); 
+        msg_btnSendClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                msg_btnSendClearActionPerformed(evt);
+            }
+        });
+        msg_panel5.add(msg_btnSendClear);
+
+        msg_label2.setForeground(new java.awt.Color(255, 255, 255));
+        msg_label2.setText(bundle.getString("CTModerator.msg_label2.text")); 
+        msg_panel5.add(msg_label2);
+
+        cbb_msgMList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbb_msgMList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbb_msgMListActionPerformed(evt);
+            }
+        });
+        msg_panel5.add(cbb_msgMList);
+
+        jPanel53.add(msg_panel5, java.awt.BorderLayout.EAST);
+
+        msg_lowerPanel.add(jPanel53);
+
+        msgPanel.add(msg_lowerPanel, java.awt.BorderLayout.SOUTH);
+
+        jTabbedPane1.addTab(bundle.getString("CTModerator.msgPanel.TabConstraints.tabTitle"), msgPanel); 
+
+        screenPanel.setLayout(new java.awt.BorderLayout());
+
+        srn_upperPanel.setBackground(new java.awt.Color(102, 102, 102));
+        srn_upperPanel.setPreferredSize(new java.awt.Dimension(849, 33));
+        srn_upperPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText(bundle.getString("CTModerator.jLabel2.text")); 
+        srn_upperPanel.add(jLabel2);
+
+        cbb_srnMList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All" }));
+        cbb_srnMList.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cbb_srnMListItemStateChanged(evt);
+            }
+        });
+        cbb_srnMList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbb_srnMListActionPerformed(evt);
+            }
+        });
+        srn_upperPanel.add(cbb_srnMList);
+
+        btn_srnStart.setText(bundle.getString("CTModerator.btn_srnStart.text")); 
+        btn_srnStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_srnStartActionPerformed(evt);
+            }
+        });
+        srn_upperPanel.add(btn_srnStart);
+
+        rb_srnMonitor.setForeground(new java.awt.Color(255, 255, 255));
+        rb_srnMonitor.setText(bundle.getString("CTModerator.rb_srnMonitor.text")); 
+        rb_srnMonitor.setOpaque(false);
+        rb_srnMonitor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rb_srnMonitorActionPerformed(evt);
+            }
+        });
+        srn_upperPanel.add(rb_srnMonitor);
+
+        rb_srnControlAndImage.setForeground(new java.awt.Color(255, 255, 255));
+        rb_srnControlAndImage.setSelected(true);
+        rb_srnControlAndImage.setText(bundle.getString("CTModerator.rb_srnControlAndImage.text")); 
+        rb_srnControlAndImage.setOpaque(false);
+        rb_srnControlAndImage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rb_srnControlAndImageActionPerformed(evt);
+            }
+        });
+        srn_upperPanel.add(rb_srnControlAndImage);
+
+        btn_srnRefresh.setText(bundle.getString("CTModerator.btn_srnRefresh.text")); 
+        btn_srnRefresh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_srnRefreshActionPerformed(evt);
+            }
+        });
+        srn_upperPanel.add(btn_srnRefresh);
+
+        btn_srnACD.setText(bundle.getString("CTModerator.btn_srnACD.text")); 
+        btn_srnACD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_srnACDActionPerformed(evt);
+            }
+        });
+        srn_upperPanel.add(btn_srnACD);
+
+        jButton11.setText(bundle.getString("CTModerator.jButton11.text")); 
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        srn_upperPanel.add(jButton11);
+
+        cb_srnFix.setForeground(new java.awt.Color(255, 255, 255));
+        cb_srnFix.setSelected(true);
+        cb_srnFix.setText(bundle.getString("CTModerator.cb_srnFix.text")); 
+        cb_srnFix.setOpaque(false);
+        cb_srnFix.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_srnFixActionPerformed(evt);
+            }
+        });
+        srn_upperPanel.add(cb_srnFix);
+
+        screenPanel.add(srn_upperPanel, java.awt.BorderLayout.NORTH);
+        screenPanel.add(srn_scrollPane1, java.awt.BorderLayout.CENTER);
+
+        jTabbedPane1.addTab(bundle.getString("CTModerator.screenPanel.TabConstraints.tabTitle"), screenPanel); 
+
+        filePanel.setLayout(null);
+
+        f_panel1.setBackground(new java.awt.Color(204, 255, 255));
+        f_panel1.setLayout(new java.awt.BorderLayout());
+
+        f_panel6.setLayout(new java.awt.GridLayout(2, 1));
+
+        f_panel20.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        btn_fResetLayout1.setText(bundle.getString("CTModerator.btn_fResetLayout1.text")); 
+        btn_fResetLayout1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_fResetLayout1ActionPerformed(evt);
+            }
+        });
+        f_panel20.add(btn_fResetLayout1);
+
+        btn_fRoot1.setText(bundle.getString("CTModerator.btn_fRoot1.text")); 
+        f_panel20.add(btn_fRoot1);
+
+        f_checkBox1.setText(bundle.getString("CTModerator.f_checkBox1.text")); 
+        f_panel20.add(f_checkBox1);
+
+        f_panel6.add(f_panel20);
+
+        f_panel21.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        f_label1.setText(bundle.getString("CTModerator.f_label1.text")); 
+        f_panel21.add(f_label1);
+
+        cbb_fList1.setEditable(true);
+        cbb_fList1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbb_fList1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cbb_fList1ItemStateChanged(evt);
+            }
+        });
+        cbb_fList1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbb_fList1ActionPerformed(evt);
+            }
+        });
+        f_panel21.add(cbb_fList1);
+
+        f_panel6.add(f_panel21);
+
+        f_panel1.add(f_panel6, java.awt.BorderLayout.NORTH);
+
+        f_panel7.setBackground(new java.awt.Color(204, 204, 255));
+        f_panel7.setLayout(new java.awt.BorderLayout());
+        f_panel1.add(f_panel7, java.awt.BorderLayout.CENTER);
+
+        filePanel.add(f_panel1);
+        f_panel1.setBounds(20, 10, 310, 210);
+
+        f_panel2.setBackground(new java.awt.Color(204, 255, 255));
+        f_panel2.setLayout(new java.awt.BorderLayout());
+
+        jPanel29.setLayout(new java.awt.GridLayout(2, 0));
+
+        f_panel22.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        btn_fResetLayout2.setText(bundle.getString("CTModerator.btn_fResetLayout2.text")); 
+        btn_fResetLayout2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_fResetLayout2ActionPerformed(evt);
+            }
+        });
+        f_panel22.add(btn_fResetLayout2);
+
+        btn_fRoot2.setText(bundle.getString("CTModerator.btn_fRoot2.text")); 
+        f_panel22.add(btn_fRoot2);
+
+        jPanel29.add(f_panel22);
+
+        f_panel23.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        f_label2.setText(bundle.getString("CTModerator.f_label2.text")); 
+        f_panel23.add(f_label2);
+
+        cbb_fMlist.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbb_fMlist.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbb_fMlistActionPerformed(evt);
+            }
+        });
+        f_panel23.add(cbb_fMlist);
+
+        cbb_fList2.setEditable(true);
+        cbb_fList2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbb_fList2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cbb_fList2ItemStateChanged(evt);
+            }
+        });
+        cbb_fList2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbb_fList2ActionPerformed(evt);
+            }
+        });
+        f_panel23.add(cbb_fList2);
+
+        jPanel29.add(f_panel23);
+
+        f_panel2.add(jPanel29, java.awt.BorderLayout.NORTH);
+
+        jPanel31.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel31.setLayout(new java.awt.BorderLayout());
+        f_panel2.add(jPanel31, java.awt.BorderLayout.CENTER);
+
+        filePanel.add(f_panel2);
+        f_panel2.setBounds(360, 10, 300, 210);
+
+        f_panel3.setBackground(new java.awt.Color(204, 255, 255));
+        f_panel3.setLayout(new java.awt.BorderLayout());
+
+        f_table1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Name", "Type", "Modified Time", "Size"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        f_table1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                f_table1MouseClicked(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                f_table1MouseReleased(evt);
+            }
+        });
+        f_scrollPane6.setViewportView(f_table1);
+
+        f_panel3.add(f_scrollPane6, java.awt.BorderLayout.CENTER);
+
+        filePanel.add(f_panel3);
+        f_panel3.setBounds(20, 250, 160, 50);
+
+        f_panel4.setBackground(new java.awt.Color(204, 255, 255));
+        f_panel4.setLayout(new java.awt.BorderLayout());
+
+        f_table2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Name", "Type", "Modified Time", "Size"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        f_table2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                f_table2MouseClicked(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                f_table2MouseReleased(evt);
+            }
+        });
+        f_scrollPane7.setViewportView(f_table2);
+
+        f_panel4.add(f_scrollPane7, java.awt.BorderLayout.CENTER);
+
+        filePanel.add(f_panel4);
+        f_panel4.setBounds(220, 250, 160, 50);
+
+        f_panel5.setBackground(new java.awt.Color(204, 204, 255));
+        f_panel5.setLayout(new java.awt.BorderLayout());
+
+        f_tabbedPane1.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
+
+        f_panel18.setLayout(new java.awt.BorderLayout());
+
+        jScrollPane4.setViewportView(jTextPane1);
+
+        f_panel18.add(jScrollPane4, java.awt.BorderLayout.CENTER);
+
+        f_tabbedPane1.addTab(bundle.getString("CTModerator.f_panel18.TabConstraints.tabTitle"), f_panel18); 
+
+        jPanel6.setLayout(new java.awt.BorderLayout());
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jScrollPane3.setViewportView(jTextArea3);
+
+        jPanel6.add(jScrollPane3, java.awt.BorderLayout.CENTER);
+
+        f_tabbedPane1.addTab(bundle.getString("CTModerator.jPanel6.TabConstraints.tabTitle"), jPanel6); 
+
+        jPanel33.setLayout(new java.awt.BorderLayout());
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel33.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+
+        f_tabbedPane1.addTab(bundle.getString("CTModerator.jPanel33.TabConstraints.tabTitle"), jPanel33); 
+
+        f_panel5.add(f_tabbedPane1, java.awt.BorderLayout.CENTER);
+
+        filePanel.add(f_panel5);
+        f_panel5.setBounds(17, 330, 490, 60);
+
+        f_panel10.setBackground(new java.awt.Color(255, 204, 255));
+        f_panel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                f_panel10MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                f_panel10MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                f_panel10MousePressed(evt);
+            }
+        });
+        f_panel10.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                f_panel10MouseDragged(evt);
+            }
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                f_panel10MouseMoved(evt);
+            }
+        });
+
+        javax.swing.GroupLayout f_panel10Layout = new javax.swing.GroupLayout(f_panel10);
+        f_panel10.setLayout(f_panel10Layout);
+        f_panel10Layout.setHorizontalGroup(
+            f_panel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 140, Short.MAX_VALUE)
+        );
+        f_panel10Layout.setVerticalGroup(
+            f_panel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        filePanel.add(f_panel10);
+        f_panel10.setBounds(320, 230, 140, 10);
+
+        f_panel11.setBackground(new java.awt.Color(255, 204, 255));
+        f_panel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                f_panel11MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                f_panel11MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                f_panel11MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                f_panel11MouseReleased(evt);
+            }
+        });
+        f_panel11.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                f_panel11MouseDragged(evt);
+            }
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                f_panel11MouseMoved(evt);
+            }
+        });
+
+        javax.swing.GroupLayout f_panel11Layout = new javax.swing.GroupLayout(f_panel11);
+        f_panel11.setLayout(f_panel11Layout);
+        f_panel11Layout.setHorizontalGroup(
+            f_panel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 370, Short.MAX_VALUE)
+        );
+        f_panel11Layout.setVerticalGroup(
+            f_panel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        filePanel.add(f_panel11);
+        f_panel11.setBounds(70, 310, 370, 10);
+
+        f_panel12.setBackground(new java.awt.Color(255, 204, 255));
+        f_panel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                f_panel12MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                f_panel12MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                f_panel12MousePressed(evt);
+            }
+        });
+        f_panel12.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                f_panel12MouseDragged(evt);
+            }
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                f_panel12MouseMoved(evt);
+            }
+        });
+
+        javax.swing.GroupLayout f_panel12Layout = new javax.swing.GroupLayout(f_panel12);
+        f_panel12.setLayout(f_panel12Layout);
+        f_panel12Layout.setHorizontalGroup(
+            f_panel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+        f_panel12Layout.setVerticalGroup(
+            f_panel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 190, Short.MAX_VALUE)
+        );
+
+        filePanel.add(f_panel12);
+        f_panel12.setBounds(700, 150, 10, 190);
+
+        f_panel13.setBackground(new java.awt.Color(255, 204, 255));
+        f_panel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                f_panel13MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                f_panel13MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                f_panel13MousePressed(evt);
+            }
+        });
+        f_panel13.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                f_panel13MouseDragged(evt);
+            }
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                f_panel13MouseMoved(evt);
+            }
+        });
+
+        javax.swing.GroupLayout f_panel13Layout = new javax.swing.GroupLayout(f_panel13);
+        f_panel13.setLayout(f_panel13Layout);
+        f_panel13Layout.setHorizontalGroup(
+            f_panel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 120, Short.MAX_VALUE)
+        );
+        f_panel13Layout.setVerticalGroup(
+            f_panel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        filePanel.add(f_panel13);
+        f_panel13.setBounds(40, 230, 120, 10);
+
+        jTabbedPane1.addTab(bundle.getString("CTModerator.filePanel.TabConstraints.tabTitle"), filePanel); 
+
+        sketchPanel.setLayout(new java.awt.BorderLayout());
+
+        sk_upperPanel.setBackground(new java.awt.Color(102, 102, 102));
+        sk_upperPanel.setLayout(new java.awt.GridLayout(1, 2));
+
+        jPanel55.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel55.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jButton4.setText(bundle.getString("CTModerator.jButton4.text")); 
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel55.add(jButton4);
+
+        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel37.setText(bundle.getString("CTModerator.jLabel37.text")); 
+        jPanel55.add(jLabel37);
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(colors4));
+        jComboBox3.setRenderer(new MyCellRenderer());
+        jComboBox3.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox3ItemStateChanged(evt);
+            }
+        });
+        jPanel55.add(jComboBox3);
+
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText(bundle.getString("CTModerator.jLabel16.text")); 
+        jPanel55.add(jLabel16);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(colors3));
+        jComboBox1.setRenderer(new MyCellRenderer());
+        jPanel55.add(jComboBox1);
+
+        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel40.setText(bundle.getString("CTModerator.jLabel40.text")); 
+        jPanel55.add(jLabel40);
+
+        jComboBox4.setEditable(true);
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30" }));
+        jComboBox4.setPreferredSize(new java.awt.Dimension(48, 21));
+        jPanel55.add(jComboBox4);
+
+        jLabel48.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel48.setText(bundle.getString("CTModerator.jLabel48.text")); 
+        jPanel55.add(jLabel48);
+
+        sk_upperPanel.add(jPanel55);
+
+        jPanel54.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel54.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText(bundle.getString("CTModerator.jLabel8.text")); 
+        jPanel54.add(jLabel8);
+
+        cbb_skMList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbb_skMListActionPerformed(evt);
+            }
+        });
+        jPanel54.add(cbb_skMList);
+
+        clear.setText(bundle.getString("CTModerator.clear.text")); 
+        clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearActionPerformed(evt);
+            }
+        });
+        jPanel54.add(clear);
+
+        sk_upperPanel.add(jPanel54);
+
+        sketchPanel.add(sk_upperPanel, java.awt.BorderLayout.NORTH);
+
+        jTabbedPane1.addTab(bundle.getString("CTModerator.sketchPanel.TabConstraints.tabTitle"), sketchPanel); 
+
+        moderatorPanel.setLayout(new java.awt.BorderLayout());
+
+        jPanel1.setLayout(null);
+
+        cbb_moderatorSldList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbb_moderatorSldListActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cbb_moderatorSldList);
+        cbb_moderatorSldList.setBounds(70, 20, 120, 21);
+
+        jLabel23.setText(bundle.getString("CTModerator.jLabel23.text")); 
+        jPanel1.add(jLabel23);
+        jLabel23.setBounds(20, 20, 50, 20);
+
+        jPanel13.setBackground(new java.awt.Color(0, 51, 204));
+        jPanel13.setLayout(null);
+
+        jPanel36.setOpaque(false);
+        jPanel36.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText(bundle.getString("CTModerator.jLabel1.text")); 
+        jPanel36.add(jLabel1);
+        jLabel1.getAccessibleContext().setAccessibleName(bundle.getString("CTModerator.jLabel1.AccessibleContext.accessibleName")); 
+
+        jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox1.setText(bundle.getString("CTModerator.jCheckBox1.text")); 
+        jCheckBox1.setOpaque(false);
+        jPanel36.add(jCheckBox1);
+
+        jCheckBox2.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox2.setText(bundle.getString("CTModerator.jCheckBox2.text")); 
+        jCheckBox2.setOpaque(false);
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
+        jPanel36.add(jCheckBox2);
+
+        jButton7.setText(bundle.getString("CTModerator.jButton7.text")); 
+        jButton7.setActionCommand(bundle.getString("CTModerator.jButton7.actionCommand")); 
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel36.add(jButton7);
+
+        jButton14.setText(bundle.getString("CTModerator.jButton14.text")); 
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+        jPanel36.add(jButton14);
+
+        jPanel13.add(jPanel36);
+        jPanel36.setBounds(10, 50, 820, 40);
+
+        jPanel42.setOpaque(false);
+        jPanel42.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText(bundle.getString("CTModerator.jLabel3.text")); 
+        jPanel42.add(jLabel3);
+
+        jCheckBox5.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox5.setText(bundle.getString("CTModerator.jCheckBox5.text")); 
+        jCheckBox5.setOpaque(false);
+        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox5ActionPerformed(evt);
+            }
+        });
+        jPanel42.add(jCheckBox5);
+
+        jCheckBox8.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox8.setText(bundle.getString("CTModerator.jCheckBox8.text_1")); 
+        jCheckBox8.setOpaque(false);
+        jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox8ActionPerformed(evt);
+            }
+        });
+        jPanel42.add(jCheckBox8);
+
+        jPanel13.add(jPanel42);
+        jPanel42.setBounds(10, 10, 820, 40);
+
+        jPanel1.add(jPanel13);
+        jPanel13.setBounds(20, 70, 880, 100);
+
+        jPanel12.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel12.setLayout(null);
+
+        jPanel50.setOpaque(false);
+        jPanel50.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel7.setText(bundle.getString("CTModerator.jLabel7.text")); 
+        jPanel50.add(jLabel7);
+
+        jTextField2.setToolTipText(bundle.getString("CTModerator.jTextField2.toolTipText")); 
+        jTextField2.setPreferredSize(new java.awt.Dimension(606, 21));
+        jPanel50.add(jTextField2);
+
+        jButton9.setText(bundle.getString("CTModerator.jButton9.text")); 
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        jPanel50.add(jButton9);
+
+        jPanel12.add(jPanel50);
+        jPanel50.setBounds(10, 10, 810, 40);
+
+        jPanel14.setOpaque(false);
+        jPanel14.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel29.setText(bundle.getString("CTModerator.jLabel29.text")); 
+        jPanel14.add(jLabel29);
+
+        jPasswordField1.setText(bundle.getString("CTModerator.jPasswordField1.text")); 
+        jPasswordField1.setToolTipText(bundle.getString("CTModerator.jPasswordField1.toolTipText")); 
+        jPasswordField1.setPreferredSize(new java.awt.Dimension(106, 25));
+        jPanel14.add(jPasswordField1);
+
+        jLabel30.setText(bundle.getString("CTModerator.jLabel30.text")); 
+        jPanel14.add(jLabel30);
+
+        jTextField7.setToolTipText(bundle.getString("CTModerator.jTextField7.toolTipText")); 
+        jTextField7.setPreferredSize(new java.awt.Dimension(26, 25));
+        jPanel14.add(jTextField7);
+
+        btnReload.setText(bundle.getString("CTModerator.btnReload.text")); 
+        btnReload.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReloadActionPerformed(evt);
+            }
+        });
+        jPanel14.add(btnReload);
+
+        jPanel12.add(jPanel14);
+        jPanel14.setBounds(470, 50, 370, 40);
+
+        jPanel1.add(jPanel12);
+        jPanel12.setBounds(20, 170, 880, 100);
+
+        jPanel24.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel24.setLayout(null);
+
+        jPanel15.setOpaque(false);
+        jPanel15.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel45.setText(bundle.getString("CTModerator.jLabel45.text")); 
+        jPanel15.add(jLabel45);
+
+        jButton30.setText(bundle.getString("CTModerator.jButton30.text")); 
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton30ActionPerformed(evt);
+            }
+        });
+        jPanel15.add(jButton30);
+
+        jButton29.setText(bundle.getString("CTModerator.jButton29.text")); 
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
+        jPanel15.add(jButton29);
+
+        jPanel24.add(jPanel15);
+        jPanel15.setBounds(10, 20, 840, 40);
+
+        jPanel1.add(jPanel24);
+        jPanel24.setBounds(20, 270, 880, 80);
+
+        jTabbedPane2.addTab(bundle.getString("CTModerator.jPanel1.TabConstraints.tabTitle"), jPanel1); 
+
+        jPanel3.setLayout(null);
+
+        jLabel25.setText(bundle.getString("CTModerator.jLabel25.text")); 
+        jPanel3.add(jLabel25);
+        jLabel25.setBounds(30, 30, 50, 20);
+
+        jPanel3.add(cbb_moderatorMsgList);
+        cbb_moderatorMsgList.setBounds(90, 30, 170, 21);
+
+        jPanel18.setBackground(new java.awt.Color(0, 51, 204));
+        jPanel18.setLayout(null);
+
+        jPanel34.setOpaque(false);
+        jPanel34.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel38.setText(bundle.getString("CTModerator.jLabel38.text")); 
+        jPanel34.add(jLabel38);
+
+        jCheckBox6.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox6.setText(bundle.getString("CTModerator.jCheckBox6.text")); 
+        jCheckBox6.setOpaque(false);
+        jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox6ActionPerformed(evt);
+            }
+        });
+        jPanel34.add(jCheckBox6);
+
+        jCheckBox7.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox7.setText(bundle.getString("CTModerator.jCheckBox7.text")); 
+        jCheckBox7.setOpaque(false);
+        jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox7ActionPerformed(evt);
+            }
+        });
+        jPanel34.add(jCheckBox7);
+
+        jButton18.setText(bundle.getString("CTModerator.jButton18.text")); 
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+        jPanel34.add(jButton18);
+
+        jButton20.setText(bundle.getString("CTModerator.jButton20.text")); 
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+        jPanel34.add(jButton20);
+
+        jPanel18.add(jPanel34);
+        jPanel34.setBounds(10, 50, 790, 40);
+
+        jPanel45.setOpaque(false);
+        jPanel45.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText(bundle.getString("CTModerator.jLabel4.text")); 
+        jPanel45.add(jLabel4);
+
+        jCheckBox9.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox9.setText(bundle.getString("CTModerator.jCheckBox9.text")); 
+        jCheckBox9.setOpaque(false);
+        jCheckBox9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox9ActionPerformed(evt);
+            }
+        });
+        jPanel45.add(jCheckBox9);
+
+        jCheckBox10.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox10.setText(bundle.getString("CTModerator.jCheckBox10.text")); 
+        jCheckBox10.setOpaque(false);
+        jCheckBox10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox10ActionPerformed(evt);
+            }
+        });
+        jPanel45.add(jCheckBox10);
+
+        jPanel18.add(jPanel45);
+        jPanel45.setBounds(10, 10, 780, 40);
+
+        jPanel3.add(jPanel18);
+        jPanel18.setBounds(20, 60, 870, 100);
+
+        jPanel19.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel3.add(jPanel19);
+        jPanel19.setBounds(20, 160, 870, 120);
+
+        jTabbedPane2.addTab(bundle.getString("CTModerator.jPanel3.TabConstraints.tabTitle"), jPanel3); 
+
+        jPanel7.setOpaque(false);
+        jPanel7.setLayout(null);
+
+        jLabel32.setText(bundle.getString("CTModerator.jLabel32.text")); 
+        jPanel7.add(jLabel32);
+        jLabel32.setBounds(30, 20, 50, 20);
+
+        jPanel7.add(cbb_moderatorSrnList);
+        cbb_moderatorSrnList.setBounds(90, 20, 170, 21);
+
+        jButton6.setForeground(new java.awt.Color(0, 51, 255));
+        jButton6.setText(bundle.getString("CTModerator.jButton6.text")); 
+        jButton6.setOpaque(false);
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jButton6);
+        jButton6.setBounds(140, 280, 310, 23);
+
+        jButton19.setForeground(new java.awt.Color(0, 51, 255));
+        jButton19.setText(bundle.getString("CTModerator.jButton19.text")); 
+        jButton19.setOpaque(false);
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jButton19);
+        jButton19.setBounds(470, 280, 90, 23);
+
+        jCheckBox19.setSelected(true);
+        jCheckBox19.setText(bundle.getString("CTModerator.jCheckBox19.text")); 
+        jCheckBox19.setOpaque(false);
+        jPanel7.add(jCheckBox19);
+        jCheckBox19.setBounds(50, 210, 200, 23);
+
+        jCheckBox20.setSelected(true);
+        jCheckBox20.setText(bundle.getString("CTModerator.jCheckBox20.text")); 
+        jCheckBox20.setOpaque(false);
+        jPanel7.add(jCheckBox20);
+        jCheckBox20.setBounds(260, 210, 230, 23);
+
+        jButton25.setText(bundle.getString("CTModerator.jButton25.text")); 
+        jButton25.setActionCommand(bundle.getString("CTModerator.jButton25.actionCommand")); 
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton25ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jButton25);
+        jButton25.setBounds(500, 210, 90, 23);
+
+        jPanel20.setBackground(new java.awt.Color(0, 51, 204));
+        jPanel20.setLayout(null);
+
+        jPanel32.setOpaque(false);
+        jPanel32.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel39.setText(bundle.getString("CTModerator.jLabel39.text")); 
+        jPanel32.add(jLabel39);
+
+        jCheckBox15.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox15.setText(bundle.getString("CTModerator.jCheckBox15.text")); 
+        jCheckBox15.setOpaque(false);
+        jPanel32.add(jCheckBox15);
+
+        jCheckBox16.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox16.setText(bundle.getString("CTModerator.jCheckBox16.text")); 
+        jCheckBox16.setOpaque(false);
+        jCheckBox16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox16ActionPerformed(evt);
+            }
+        });
+        jPanel32.add(jCheckBox16);
+
+        jButton24.setText(bundle.getString("CTModerator.jButton24.text")); 
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
+        jPanel32.add(jButton24);
+
+        jButton26.setText(bundle.getString("CTModerator.jButton26.text")); 
+        jButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton26ActionPerformed(evt);
+            }
+        });
+        jPanel32.add(jButton26);
+
+        jPanel20.add(jPanel32);
+        jPanel32.setBounds(20, 60, 790, 40);
+
+        jPanel46.setOpaque(false);
+        jPanel46.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText(bundle.getString("CTModerator.jLabel6.text")); 
+        jPanel46.add(jLabel6);
+
+        jCheckBox11.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox11.setText(bundle.getString("CTModerator.jCheckBox11.text_1")); 
+        jCheckBox11.setOpaque(false);
+        jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox11ActionPerformed(evt);
+            }
+        });
+        jPanel46.add(jCheckBox11);
+
+        jCheckBox12.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox12.setText(bundle.getString("CTModerator.jCheckBox12.text")); 
+        jCheckBox12.setOpaque(false);
+        jCheckBox12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox12ActionPerformed(evt);
+            }
+        });
+        jPanel46.add(jCheckBox12);
+
+        jPanel20.add(jPanel46);
+        jPanel46.setBounds(20, 10, 1010, 40);
+
+        jPanel7.add(jPanel20);
+        jPanel20.setBounds(20, 70, 1050, 110);
+
+        jLabel43.setText(bundle.getString("CTModerator.jLabel43.text")); 
+        jPanel7.add(jLabel43);
+        jLabel43.setBounds(40, 260, 160, 15);
+
+        jButton34.setText(bundle.getString("CTModerator.jButton34.text")); 
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton34ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jButton34);
+        jButton34.setBounds(140, 320, 310, 23);
+
+        jPanel21.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel7.add(jPanel21);
+        jPanel21.setBounds(20, 250, 1050, 100);
+
+        jLabel41.setText(bundle.getString("CTModerator.jLabel41.text")); 
+        jPanel7.add(jLabel41);
+        jLabel41.setBounds(40, 190, 210, 15);
+
+        jPanel22.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel7.add(jPanel22);
+        jPanel22.setBounds(20, 180, 1050, 70);
+
+        jTabbedPane2.addTab(bundle.getString("CTModerator.jPanel7.TabConstraints.tabTitle"), jPanel7); 
+
+        jPanel26.setLayout(null);
+
+        jPanel26.add(cbb_moderatorFList);
+        cbb_moderatorFList.setBounds(90, 20, 170, 21);
+
+        jLabel46.setText(bundle.getString("CTModerator.jLabel46.text")); 
+        jPanel26.add(jLabel46);
+        jLabel46.setBounds(30, 20, 50, 20);
+
+        jPanel27.setBackground(new java.awt.Color(0, 51, 204));
+        jPanel27.setLayout(null);
+
+        jPanel30.setOpaque(false);
+        jPanel30.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel47.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel47.setText(bundle.getString("CTModerator.jLabel47.text")); 
+        jPanel30.add(jLabel47);
+
+        jCheckBox22.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox22.setText(bundle.getString("CTModerator.jCheckBox22.text")); 
+        jCheckBox22.setOpaque(false);
+        jCheckBox22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox22ActionPerformed(evt);
+            }
+        });
+        jPanel30.add(jCheckBox22);
+
+        jCheckBox23.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox23.setText(bundle.getString("CTModerator.jCheckBox23.text")); 
+        jCheckBox23.setOpaque(false);
+        jCheckBox23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox23ActionPerformed(evt);
+            }
+        });
+        jPanel30.add(jCheckBox23);
+
+        jButton35.setText(bundle.getString("CTModerator.jButton35.text")); 
+        jButton35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton35ActionPerformed(evt);
+            }
+        });
+        jPanel30.add(jButton35);
+
+        jPanel27.add(jPanel30);
+        jPanel30.setBounds(20, 54, 800, 40);
+
+        jPanel47.setOpaque(false);
+        jPanel47.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText(bundle.getString("CTModerator.jLabel10.text")); 
+        jPanel47.add(jLabel10);
+
+        jCheckBox17.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox17.setText(bundle.getString("CTModerator.jCheckBox17.text")); 
+        jCheckBox17.setOpaque(false);
+        jCheckBox17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox17ActionPerformed(evt);
+            }
+        });
+        jPanel47.add(jCheckBox17);
+
+        jCheckBox18.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox18.setText(bundle.getString("CTModerator.jCheckBox18.text")); 
+        jCheckBox18.setOpaque(false);
+        jCheckBox18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox18ActionPerformed(evt);
+            }
+        });
+        jPanel47.add(jCheckBox18);
+
+        jPanel27.add(jPanel47);
+        jPanel47.setBounds(20, 10, 830, 40);
+
+        jPanel26.add(jPanel27);
+        jPanel27.setBounds(10, 60, 890, 100);
+
+        jPanel49.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel26.add(jPanel49);
+        jPanel49.setBounds(10, 160, 890, 120);
+
+        jTabbedPane2.addTab(bundle.getString("CTModerator.jPanel26.TabConstraints.tabTitle"), jPanel26); 
+
+        jPanel2.setLayout(null);
+
+        jLabel24.setText(bundle.getString("CTModerator.jLabel24.text")); 
+        jPanel2.add(jLabel24);
+        jLabel24.setBounds(30, 20, 80, 20);
+
+        jPanel2.add(cbb_moderatorSkList);
+        cbb_moderatorSkList.setBounds(110, 20, 170, 21);
+
+        jPanel16.setBackground(new java.awt.Color(0, 51, 204));
+        jPanel16.setLayout(null);
+
+        jPanel28.setOpaque(false);
+        jPanel28.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText(bundle.getString("CTModerator.jLabel5.text")); 
+        jPanel28.add(jLabel5);
+
+        jCheckBox3.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox3.setText(bundle.getString("CTModerator.jCheckBox3.text")); 
+        jCheckBox3.setOpaque(false);
+        jPanel28.add(jCheckBox3);
+
+        jCheckBox4.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox4.setText(bundle.getString("CTModerator.jCheckBox4.text")); 
+        jCheckBox4.setOpaque(false);
+        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox4ActionPerformed(evt);
+            }
+        });
+        jPanel28.add(jCheckBox4);
+
+        jButton8.setText(bundle.getString("CTModerator.jButton8.text")); 
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        jPanel28.add(jButton8);
+
+        jButton13.setText(bundle.getString("CTModerator.jButton13.text")); 
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        jPanel28.add(jButton13);
+
+        jPanel16.add(jPanel28);
+        jPanel28.setBounds(10, 50, 820, 40);
+
+        jPanel48.setOpaque(false);
+        jPanel48.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText(bundle.getString("CTModerator.jLabel11.text")); 
+        jPanel48.add(jLabel11);
+
+        jCheckBox21.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox21.setText(bundle.getString("CTModerator.jCheckBox21.text_1")); 
+        jCheckBox21.setOpaque(false);
+        jCheckBox21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox21ActionPerformed(evt);
+            }
+        });
+        jPanel48.add(jCheckBox21);
+
+        jCheckBox24.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox24.setText(bundle.getString("CTModerator.jCheckBox24.text")); 
+        jCheckBox24.setOpaque(false);
+        jCheckBox24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox24ActionPerformed(evt);
+            }
+        });
+        jPanel48.add(jCheckBox24);
+
+        jPanel16.add(jPanel48);
+        jPanel48.setBounds(10, 10, 780, 40);
+
+        jPanel2.add(jPanel16);
+        jPanel16.setBounds(10, 50, 890, 100);
+
+        jPanel17.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel2.add(jPanel17);
+        jPanel17.setBounds(10, 150, 890, 130);
+
+        jTabbedPane2.addTab(bundle.getString("CTModerator.jPanel2.TabConstraints.tabTitle"), jPanel2); 
+
+        jPanel5.setLayout(null);
+
+        jLabel26.setText(bundle.getString("CTModerator.jLabel26.text")); 
+        jPanel5.add(jLabel26);
+        jLabel26.setBounds(30, 20, 70, 20);
+
+        cbb_moderatorPermissionList.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cbb_moderatorPermissionListItemStateChanged(evt);
+            }
+        });
+        jPanel5.add(cbb_moderatorPermissionList);
+        cbb_moderatorPermissionList.setBounds(110, 20, 160, 21);
+
+        jPanel23.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel23.setLayout(null);
+
+        jPanel38.setOpaque(false);
+        jPanel38.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel17.setText(bundle.getString("CTModerator.jLabel17.text")); 
+        jPanel38.add(jLabel17);
+
+        cbSlideAu1.setText(bundle.getString("CTModerator.cbSlideAu1.text")); 
+        cbSlideAu1.setOpaque(false);
+        cbSlideAu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSlideAu1ActionPerformed(evt);
+            }
+        });
+        jPanel38.add(cbSlideAu1);
+
+        cbSlideAu2.setText(bundle.getString("CTModerator.jCheckBox21.text")); 
+        cbSlideAu2.setOpaque(false);
+        cbSlideAu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSlideAu2ActionPerformed(evt);
+            }
+        });
+        jPanel38.add(cbSlideAu2);
+
+        jPanel23.add(jPanel38);
+        jPanel38.setBounds(10, 20, 810, 40);
+
+        jPanel39.setOpaque(false);
+        jPanel39.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel14.setText(bundle.getString("CTModerator.jLabel14.text")); 
+        jPanel39.add(jLabel14);
+
+        cbSketchAu1.setText(bundle.getString("CTModerator.cbSketchAu1.text")); 
+        cbSketchAu1.setOpaque(false);
+        cbSketchAu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSketchAu1ActionPerformed(evt);
+            }
+        });
+        jPanel39.add(cbSketchAu1);
+
+        cbSketchAu2.setText(bundle.getString("CTModerator.cbSketchAu2.text")); 
+        cbSketchAu2.setToolTipText(bundle.getString("CTModerator.cbSketchAu2.toolTipText")); 
+        cbSketchAu2.setOpaque(false);
+        cbSketchAu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSketchAu2ActionPerformed(evt);
+            }
+        });
+        jPanel39.add(cbSketchAu2);
+
+        jPanel23.add(jPanel39);
+        jPanel39.setBounds(10, 60, 780, 30);
+
+        jPanel40.setOpaque(false);
+        jPanel40.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel15.setText(bundle.getString("CTModerator.jLabel15.text")); 
+        jPanel40.add(jLabel15);
+
+        cbMsgAu1.setText(bundle.getString("CTModerator.cbMsgAu1.text")); 
+        cbMsgAu1.setOpaque(false);
+        jPanel40.add(cbMsgAu1);
+
+        cbMsgAu2.setText(bundle.getString("CTModerator.jCheckBox11.text")); 
+        cbMsgAu2.setOpaque(false);
+        jPanel40.add(cbMsgAu2);
+
+        jPanel23.add(jPanel40);
+        jPanel40.setBounds(10, 97, 780, 33);
+
+        jPanel41.setOpaque(false);
+        jPanel41.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel33.setText(bundle.getString("CTModerator.jLabel33.text")); 
+        jPanel41.add(jLabel33);
+
+        cbSrnAu1.setText(bundle.getString("CTModerator.cbSrnAu1.text")); 
+        cbSrnAu1.setOpaque(false);
+        jPanel41.add(cbSrnAu1);
+
+        cbSrnAu2.setText(bundle.getString("CTModerator.cbSrnAu2.text")); 
+        cbSrnAu2.setOpaque(false);
+        jPanel41.add(cbSrnAu2);
+
+        jPanel23.add(jPanel41);
+        jPanel41.setBounds(10, 140, 800, 40);
+
+        jPanel43.setOpaque(false);
+        jPanel43.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel18.setText(bundle.getString("CTModerator.jLabel18.text")); 
+        jPanel43.add(jLabel18);
+
+        cbOpenWebAu.setText(bundle.getString("CTModerator.cbOpenWebAu.text")); 
+        cbOpenWebAu.setOpaque(false);
+        jPanel43.add(cbOpenWebAu);
+
+        jPanel23.add(jPanel43);
+        jPanel43.setBounds(10, 220, 510, 40);
+
+        jButton10.setText(bundle.getString("CTModerator.jButton10.text")); 
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        jPanel23.add(jButton10);
+        jButton10.setBounds(540, 220, 90, 30);
+
+        jPanel44.setOpaque(false);
+        jPanel44.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel28.setText(bundle.getString("CTModerator.jLabel28.text")); 
+        jPanel44.add(jLabel28);
+
+        cbFileAu1.setText(bundle.getString("CTModerator.cbFileAu1.text")); 
+        cbFileAu1.setOpaque(false);
+        cbFileAu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbFileAu1ActionPerformed(evt);
+            }
+        });
+        jPanel44.add(cbFileAu1);
+
+        cbFileAu2.setText(bundle.getString("CTModerator.cbFileAu2.text")); 
+        cbFileAu2.setOpaque(false);
+        cbFileAu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbFileAu2ActionPerformed(evt);
+            }
+        });
+        jPanel44.add(cbFileAu2);
+
+        jPanel23.add(jPanel44);
+        jPanel44.setBounds(10, 180, 790, 40);
+
+        jPanel5.add(jPanel23);
+        jPanel23.setBounds(20, 60, 870, 280);
+
+        jPanel25.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel25.setLayout(null);
+
+        jPanel8.setOpaque(false);
+        jPanel8.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel44.setText(bundle.getString("CTModerator.jLabel44.text")); 
+        jPanel8.add(jLabel44);
+
+        jButton40.setText(bundle.getString("CTModerator.jButton40.text")); 
+        jButton40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton40ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(jButton40);
+
+        jButton21.setText(bundle.getString("CTModerator.jButton21.text")); 
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(jButton21);
+
+        jPanel25.add(jPanel8);
+        jPanel8.setBounds(10, 10, 790, 40);
+
+        jPanel5.add(jPanel25);
+        jPanel25.setBounds(20, 340, 870, 60);
+
+        jTabbedPane2.addTab(bundle.getString("CTModerator.jPanel5.TabConstraints.tabTitle"), jPanel5); 
+
+        jPanel4.setLayout(null);
+
+        jLabel19.setText(bundle.getString("CTModerator.jLabel19.text")); 
+        jPanel4.add(jLabel19);
+        jLabel19.setBounds(30, 90, 140, 20);
+        jPanel4.add(jTextField5);
+        jTextField5.setBounds(170, 90, 410, 21);
+
+        jButton12.setText(bundle.getString("CTModerator.jButton12.text")); 
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton12);
+        jButton12.setBounds(590, 90, 80, 23);
+
+        jLabel22.setText(bundle.getString("CTModerator.jLabel22.text")); 
+        jPanel4.add(jLabel22);
+        jLabel22.setBounds(20, 30, 60, 20);
+
+        jPanel4.add(cbb_moderatorElseList);
+        cbb_moderatorElseList.setBounds(80, 30, 170, 21);
+
+        jLabel34.setText(bundle.getString("CTModerator.jLabel34.text")); 
+        jPanel4.add(jLabel34);
+        jLabel34.setBounds(30, 140, 140, 20);
+        jPanel4.add(jTextField8);
+        jTextField8.setBounds(170, 140, 360, 21);
+
+        jPanel9.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel4.add(jPanel9);
+        jPanel9.setBounds(20, 70, 1140, 60);
+
+        jButton27.setText(bundle.getString("CTModerator.jButton27.text")); 
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton27);
+        jButton27.setBounds(590, 170, 80, 23);
+
+        jLabel35.setText(bundle.getString("CTModerator.jLabel35.text")); 
+        jPanel4.add(jLabel35);
+        jLabel35.setBounds(110, 170, 100, 20);
+        jPanel4.add(jTextField9);
+        jTextField9.setBounds(220, 170, 360, 21);
+
+        jPanel10.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel4.add(jPanel10);
+        jPanel10.setBounds(20, 130, 1140, 80);
+
+        jLabel42.setText(bundle.getString("CTModerator.jLabel42.text")); 
+        jPanel4.add(jLabel42);
+        jLabel42.setBounds(30, 220, 160, 15);
+
+        jPanel11.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel11.setLayout(null);
+
+        jPanel35.setOpaque(false);
+        jPanel35.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jButton28.setText(bundle.getString("CTModerator.jButton28.text")); 
+        jButton28.setToolTipText(bundle.getString("CTModerator.jButton28.toolTipText")); 
+        jButton28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton28ActionPerformed(evt);
+            }
+        });
+        jPanel35.add(jButton28);
+
+        jButton36.setText(bundle.getString("CTModerator.jButton36.text")); 
+        jButton36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton36ActionPerformed(evt);
+            }
+        });
+        jPanel35.add(jButton36);
+
+        jPanel11.add(jPanel35);
+        jPanel35.setBounds(10, 30, 620, 40);
+
+        jPanel37.setOpaque(false);
+        jPanel37.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jButton32.setText(bundle.getString("CTModerator.jButton32.text")); 
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton32ActionPerformed(evt);
+            }
+        });
+        jPanel37.add(jButton32);
+
+        jButton33.setText(bundle.getString("CTModerator.jButton33.text")); 
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton33ActionPerformed(evt);
+            }
+        });
+        jPanel37.add(jButton33);
+
+        jButton15.setText(bundle.getString("CTModerator.jButton15.text")); 
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+        jPanel37.add(jButton15);
+
+        jButton16.setText(bundle.getString("CTModerator.jButton16.text")); 
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+        jPanel37.add(jButton16);
+
+        jPanel11.add(jPanel37);
+        jPanel37.setBounds(10, 70, 970, 40);
+
+        jPanel4.add(jPanel11);
+        jPanel11.setBounds(20, 210, 1140, 130);
+
+        jTabbedPane2.addTab(bundle.getString("CTModerator.jPanel4.TabConstraints.tabTitle"), jPanel4); 
+
+        moderatorPanel.add(jTabbedPane2, java.awt.BorderLayout.CENTER);
+
+        jTabbedPane1.addTab(bundle.getString("CTModerator.moderatorPanel.TabConstraints.tabTitle"), moderatorPanel); 
+
+        statusPanel.setLayout(new java.awt.BorderLayout());
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setLineWrap(true);
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        statusPanel.add(jScrollPane2, java.awt.BorderLayout.CENTER);
+        statusPanel.add(jTextField4, java.awt.BorderLayout.PAGE_END);
+
+        status_upperPanel.setBackground(new java.awt.Color(102, 102, 102));
+        status_upperPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel36.setText(bundle.getString("CTModerator.jLabel36.text")); 
+        status_upperPanel.add(jLabel36);
+
+        status_upperPanel.add(cbb_moderatorStatusList);
+
+        jButton1.setText(bundle.getString("CTModerator.jButton1.text")); 
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        status_upperPanel.add(jButton1);
+
+        jButton41.setText(bundle.getString("CTModerator.jButton41.text")); 
+        jButton41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton41ActionPerformed(evt);
+            }
+        });
+        status_upperPanel.add(jButton41);
+
+        jButton42.setText(bundle.getString("CTModerator.jButton42.text")); 
+        jButton42.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton42ActionPerformed(evt);
+            }
+        });
+        status_upperPanel.add(jButton42);
+
+        jButton3.setText(bundle.getString("CTModerator.jButton3.text")); 
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        status_upperPanel.add(jButton3);
+
+        jButton31.setText(bundle.getString("CTModerator.jButton31.text")); 
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton31ActionPerformed(evt);
+            }
+        });
+        status_upperPanel.add(jButton31);
+
+        jButton17.setText(bundle.getString("CTModerator.jButton17.text")); 
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+        status_upperPanel.add(jButton17);
+
+        status_checkBox1.setForeground(new java.awt.Color(255, 255, 255));
+        status_checkBox1.setText(bundle.getString("CTModerator.status_checkBox1.text")); 
+        status_checkBox1.setOpaque(false);
+        status_upperPanel.add(status_checkBox1);
+
+        statusPanel.add(status_upperPanel, java.awt.BorderLayout.NORTH);
+
+        jTabbedPane1.addTab(bundle.getString("CTModerator.statusPanel.TabConstraints.tabTitle"), statusPanel); 
+
+        getContentPane().add(jTabbedPane1, java.awt.BorderLayout.CENTER);
+
+        jMenu1.setText(bundle.getString("CTModerator.jMenu1.text")); 
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
+
+        jMenuItem5.setText(bundle.getString("CTModerator.jMenuItem5.text")); 
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem5);
+
+        jMenuItem11.setText(bundle.getString("CTModerator.jMenuItem11.text")); 
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem11);
+
+        jMenuItem12.setText(bundle.getString("CTModerator.jMenuItem12.text")); 
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem12);
+
+        jMenuItem13.setText(bundle.getString("CTModerator.jMenuItem13.text")); 
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem13);
+
+        jMenuItem14.setText(bundle.getString("CTModerator.jMenuItem14.text")); 
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem14ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem14);
+
+        jMenuItem15.setText(bundle.getString("CTModerator.jMenuItem15.text")); 
+        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem15ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem15);
+
+        jMenuItem16.setText(bundle.getString("CTModerator.jMenuItem16.text")); 
+        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem16ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem16);
+
+        jMenuItem1.setText(bundle.getString("CTModerator.jMenuItem1.text")); 
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText(bundle.getString("CTModerator.jMenu2.text")); 
+
+        jMenuItem3.setText(bundle.getString("CTModerator.jMenuItem3.text")); 
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText(bundle.getString("CTModerator.jMenu3.text")); 
+        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu3ActionPerformed(evt);
+            }
+        });
+
+        jMenuItem8.setText(bundle.getString("CTModerator.jMenuItem8.text")); 
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem8);
+
+        jMenuItem7.setText(bundle.getString("CTModerator.jMenuItem7.text")); 
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem7);
+
+        jMenuItem17.setText(bundle.getString("CTModerator.jMenuItem17.text")); 
+        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem17ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem17);
+
+        jMenuItem6.setText(bundle.getString("CTModerator.jMenuItem6.text")); 
+        jMenu3.add(jMenuItem6);
+
+        jMenuItem4.setText(bundle.getString("CTModerator.jMenuItem4.text")); 
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem4);
+
+        jMenuItem10.setText(bundle.getString("CTModerator.jMenuItem10.text")); 
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem10);
+
+        jMenuItem9.setText(bundle.getString("CTModerator.jMenuItem9.text")); 
+        jMenu3.add(jMenuItem9);
+
+        jMenuItem2.setText(bundle.getString("CTModerator.jMenuItem2.text")); 
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu3);
+
+        setJMenuBar(jMenuBar1);
+
+        pack();
+    }
 
 private void formWindowClosing(java.awt.event.WindowEvent evt) {
   closing();
@@ -10273,336 +10274,338 @@ else if(!jCheckBox17.isSelected() && !jCheckBox18.isSelected())  {jCheckBox22.se
     }catch(AWTException e){e.printStackTrace();}
   }
 
-  public void informVersion(int status,String version){
+  public void informVersion(String apId,int status,String version){
 
+    if(apId.equals(this.apId)){
     if(status==1 || status==3) {hasNewVersion=true; newversion=version;}
     if(status==3) {
       appendStatus(bundle2.getString("CTModerator.xy.msg35")+"\r\n");
     } else if(status==2) appendStatus(bundle2.getString("CTModerator.xy.msg37")+"\r\n");
     updateTitle();
+    }
   }
 
   
 
-  private javax.swing.JButton btnReload;
-  private javax.swing.JButton btn_fResetLayout1;
-  private javax.swing.JButton btn_fResetLayout2;
-  private javax.swing.JButton btn_fRoot1;
-  private javax.swing.JButton btn_fRoot2;
-  private javax.swing.JButton btn_openSld;
-  private javax.swing.JButton btn_srnACD;
-  private javax.swing.JButton btn_srnRefresh;
-  public javax.swing.JButton btn_srnStart;
-  private javax.swing.ButtonGroup buttonGroup1;
-  private javax.swing.ButtonGroup buttonGroup2;
-  private javax.swing.ButtonGroup buttonGroup3;
-  private javax.swing.ButtonGroup buttonGroup6;
-  private javax.swing.ButtonGroup buttonGroup7;
-  private javax.swing.ButtonGroup buttonGroup8;
-  private javax.swing.JCheckBox cbFileAu1;
-  private javax.swing.JCheckBox cbFileAu2;
-  private javax.swing.JCheckBox cbMsgAu1;
-  private javax.swing.JCheckBox cbMsgAu2;
-  private javax.swing.JCheckBox cbOpenWebAu;
-  private javax.swing.JCheckBox cbSketchAu1;
-  private javax.swing.JCheckBox cbSketchAu2;
-  private javax.swing.JCheckBox cbSlideAu1;
-  private javax.swing.JCheckBox cbSlideAu2;
-  private javax.swing.JCheckBox cbSrnAu1;
-  private javax.swing.JCheckBox cbSrnAu2;
-  public javax.swing.JCheckBox cb_srnFix;
-  public javax.swing.JComboBox cbb_fList1;
-  public javax.swing.JComboBox cbb_fList2;
-  private javax.swing.JComboBox cbb_fMlist;
-  private javax.swing.JComboBox cbb_moderatorElseList;
-  private javax.swing.JComboBox cbb_moderatorFList;
-  private javax.swing.JComboBox cbb_moderatorMsgList;
-  private javax.swing.JComboBox cbb_moderatorPermissionList;
-  private javax.swing.JComboBox cbb_moderatorSkList;
-  private javax.swing.JComboBox cbb_moderatorSldList;
-  private javax.swing.JComboBox cbb_moderatorSrnList;
-  private javax.swing.JComboBox cbb_moderatorStatusList;
-  private javax.swing.JComboBox cbb_msgMList;
-  private javax.swing.JComboBox cbb_skMList;
-  public javax.swing.JComboBox cbb_sldMList;
-  protected javax.swing.JComboBox cbb_slide;
-  private javax.swing.JComboBox cbb_slideInx;
-  public javax.swing.JComboBox cbb_srnMList;
-  private javax.swing.JButton clear;
-  private javax.swing.JCheckBox f_checkBox1;
-  private javax.swing.JLabel f_label1;
-  private javax.swing.JLabel f_label2;
-  private javax.swing.JPanel f_panel1;
-  private javax.swing.JPanel f_panel10;
-  private javax.swing.JPanel f_panel11;
-  private javax.swing.JPanel f_panel12;
-  private javax.swing.JPanel f_panel13;
-  private javax.swing.JPanel f_panel18;
-  private javax.swing.JPanel f_panel2;
-  private javax.swing.JPanel f_panel20;
-  private javax.swing.JPanel f_panel21;
-  private javax.swing.JPanel f_panel22;
-  private javax.swing.JPanel f_panel23;
-  private javax.swing.JPanel f_panel3;
-  private javax.swing.JPanel f_panel4;
-  private javax.swing.JPanel f_panel5;
-  private javax.swing.JPanel f_panel6;
-  private javax.swing.JPanel f_panel7;
-  private javax.swing.JScrollPane f_scrollPane6;
-  private javax.swing.JScrollPane f_scrollPane7;
-  private javax.swing.JTabbedPane f_tabbedPane1;
-  private javax.swing.JTable f_table1;
-  private javax.swing.JTable f_table2;
-  private javax.swing.JPanel filePanel;
-  private javax.swing.JButton jButton1;
-  private javax.swing.JButton jButton10;
-  private javax.swing.JButton jButton11;
-  private javax.swing.JButton jButton12;
-  private javax.swing.JButton jButton13;
-  private javax.swing.JButton jButton14;
-  private javax.swing.JButton jButton15;
-  private javax.swing.JButton jButton16;
-  private javax.swing.JButton jButton17;
-  private javax.swing.JButton jButton18;
-  private javax.swing.JButton jButton19;
-  private javax.swing.JButton jButton2;
-  private javax.swing.JButton jButton20;
-  private javax.swing.JButton jButton21;
-  private javax.swing.JButton jButton24;
-  private javax.swing.JButton jButton25;
-  private javax.swing.JButton jButton26;
-  private javax.swing.JButton jButton27;
-  private javax.swing.JButton jButton28;
-  private javax.swing.JButton jButton29;
-  private javax.swing.JButton jButton3;
-  private javax.swing.JButton jButton30;
-  private javax.swing.JButton jButton31;
-  private javax.swing.JButton jButton32;
-  private javax.swing.JButton jButton33;
-  private javax.swing.JButton jButton34;
-  private javax.swing.JButton jButton35;
-  private javax.swing.JButton jButton36;
-  private javax.swing.JButton jButton38;
-  private javax.swing.JButton jButton39;
-  private javax.swing.JButton jButton4;
-  private javax.swing.JButton jButton40;
-  private javax.swing.JButton jButton41;
-  private javax.swing.JButton jButton42;
-  private javax.swing.JButton jButton5;
-  private javax.swing.JButton jButton6;
-  private javax.swing.JButton jButton7;
-  private javax.swing.JButton jButton8;
-  private javax.swing.JButton jButton9;
-  private javax.swing.JCheckBox jCheckBox1;
-  private javax.swing.JCheckBox jCheckBox10;
-  private javax.swing.JCheckBox jCheckBox11;
-  private javax.swing.JCheckBox jCheckBox12;
-  private javax.swing.JCheckBox jCheckBox13;
-  private javax.swing.JCheckBox jCheckBox14;
-  private javax.swing.JCheckBox jCheckBox15;
-  private javax.swing.JCheckBox jCheckBox16;
-  private javax.swing.JCheckBox jCheckBox17;
-  private javax.swing.JCheckBox jCheckBox18;
-  private javax.swing.JCheckBox jCheckBox19;
-  private javax.swing.JCheckBox jCheckBox2;
-  private javax.swing.JCheckBox jCheckBox20;
-  private javax.swing.JCheckBox jCheckBox21;
-  private javax.swing.JCheckBox jCheckBox22;
-  private javax.swing.JCheckBox jCheckBox23;
-  private javax.swing.JCheckBox jCheckBox24;
-  private javax.swing.JCheckBox jCheckBox3;
-  private javax.swing.JCheckBox jCheckBox4;
-  private javax.swing.JCheckBox jCheckBox5;
-  private javax.swing.JCheckBox jCheckBox6;
-  private javax.swing.JCheckBox jCheckBox7;
-  private javax.swing.JCheckBox jCheckBox8;
-  private javax.swing.JCheckBox jCheckBox9;
-  public javax.swing.JComboBox jComboBox1;
-  private javax.swing.JComboBox jComboBox2;
-  public javax.swing.JComboBox jComboBox3;
-  public javax.swing.JComboBox jComboBox4;
-  private javax.swing.JComboBox jComboBox7;
-  private javax.swing.JLabel jLabel1;
-  private javax.swing.JLabel jLabel10;
-  private javax.swing.JLabel jLabel11;
-  private javax.swing.JLabel jLabel12;
-  private javax.swing.JLabel jLabel13;
-  private javax.swing.JLabel jLabel14;
-  private javax.swing.JLabel jLabel15;
-  private javax.swing.JLabel jLabel16;
-  private javax.swing.JLabel jLabel17;
-  private javax.swing.JLabel jLabel18;
-  private javax.swing.JLabel jLabel19;
-  private javax.swing.JLabel jLabel2;
-  private javax.swing.JLabel jLabel20;
-  private javax.swing.JLabel jLabel22;
-  private javax.swing.JLabel jLabel23;
-  private javax.swing.JLabel jLabel24;
-  private javax.swing.JLabel jLabel25;
-  private javax.swing.JLabel jLabel26;
-  private javax.swing.JLabel jLabel27;
-  private javax.swing.JLabel jLabel28;
-  private javax.swing.JLabel jLabel29;
-  private javax.swing.JLabel jLabel3;
-  private javax.swing.JLabel jLabel30;
-  private javax.swing.JLabel jLabel31;
-  private javax.swing.JLabel jLabel32;
-  private javax.swing.JLabel jLabel33;
-  private javax.swing.JLabel jLabel34;
-  private javax.swing.JLabel jLabel35;
-  private javax.swing.JLabel jLabel36;
-  private javax.swing.JLabel jLabel37;
-  private javax.swing.JLabel jLabel38;
-  private javax.swing.JLabel jLabel39;
-  private javax.swing.JLabel jLabel4;
-  private javax.swing.JLabel jLabel40;
-  private javax.swing.JLabel jLabel41;
-  private javax.swing.JLabel jLabel42;
-  private javax.swing.JLabel jLabel43;
-  private javax.swing.JLabel jLabel44;
-  private javax.swing.JLabel jLabel45;
-  private javax.swing.JLabel jLabel46;
-  private javax.swing.JLabel jLabel47;
-  private javax.swing.JLabel jLabel48;
-  private javax.swing.JLabel jLabel5;
-  private javax.swing.JLabel jLabel6;
-  private javax.swing.JLabel jLabel7;
-  private javax.swing.JLabel jLabel8;
-  private javax.swing.JLabel jLabel9;
-  private javax.swing.JMenu jMenu1;
-  private javax.swing.JMenu jMenu2;
-  private javax.swing.JMenu jMenu3;
-  private javax.swing.JMenuBar jMenuBar1;
-  private javax.swing.JMenuItem jMenuItem1;
-  private javax.swing.JMenuItem jMenuItem10;
-  private javax.swing.JMenuItem jMenuItem11;
-  private javax.swing.JMenuItem jMenuItem12;
-  private javax.swing.JMenuItem jMenuItem13;
-  private javax.swing.JMenuItem jMenuItem14;
-  private javax.swing.JMenuItem jMenuItem15;
-  private javax.swing.JMenuItem jMenuItem16;
-  private javax.swing.JMenuItem jMenuItem17;
-  private javax.swing.JMenuItem jMenuItem2;
-  private javax.swing.JMenuItem jMenuItem3;
-  private javax.swing.JMenuItem jMenuItem4;
-  private javax.swing.JMenuItem jMenuItem5;
-  private javax.swing.JMenuItem jMenuItem6;
-  private javax.swing.JMenuItem jMenuItem7;
-  private javax.swing.JMenuItem jMenuItem8;
-  private javax.swing.JMenuItem jMenuItem9;
-  private javax.swing.JPanel jPanel1;
-  private javax.swing.JPanel jPanel10;
-  private javax.swing.JPanel jPanel11;
-  private javax.swing.JPanel jPanel12;
-  private javax.swing.JPanel jPanel13;
-  private javax.swing.JPanel jPanel14;
-  private javax.swing.JPanel jPanel15;
-  private javax.swing.JPanel jPanel16;
-  private javax.swing.JPanel jPanel17;
-  private javax.swing.JPanel jPanel18;
-  private javax.swing.JPanel jPanel19;
-  private javax.swing.JPanel jPanel2;
-  private javax.swing.JPanel jPanel20;
-  private javax.swing.JPanel jPanel21;
-  private javax.swing.JPanel jPanel22;
-  private javax.swing.JPanel jPanel23;
-  private javax.swing.JPanel jPanel24;
-  private javax.swing.JPanel jPanel25;
-  private javax.swing.JPanel jPanel26;
-  private javax.swing.JPanel jPanel27;
-  private javax.swing.JPanel jPanel28;
-  private javax.swing.JPanel jPanel29;
-  private javax.swing.JPanel jPanel3;
-  private javax.swing.JPanel jPanel30;
-  private javax.swing.JPanel jPanel31;
-  private javax.swing.JPanel jPanel32;
-  private javax.swing.JPanel jPanel33;
-  private javax.swing.JPanel jPanel34;
-  private javax.swing.JPanel jPanel35;
-  private javax.swing.JPanel jPanel36;
-  private javax.swing.JPanel jPanel37;
-  private javax.swing.JPanel jPanel38;
-  private javax.swing.JPanel jPanel39;
-  private javax.swing.JPanel jPanel4;
-  private javax.swing.JPanel jPanel40;
-  private javax.swing.JPanel jPanel41;
-  private javax.swing.JPanel jPanel42;
-  private javax.swing.JPanel jPanel43;
-  private javax.swing.JPanel jPanel44;
-  private javax.swing.JPanel jPanel45;
-  private javax.swing.JPanel jPanel46;
-  private javax.swing.JPanel jPanel47;
-  private javax.swing.JPanel jPanel48;
-  private javax.swing.JPanel jPanel49;
-  private javax.swing.JPanel jPanel5;
-  private javax.swing.JPanel jPanel50;
-  private javax.swing.JPanel jPanel51;
-  private javax.swing.JPanel jPanel52;
-  private javax.swing.JPanel jPanel53;
-  private javax.swing.JPanel jPanel54;
-  private javax.swing.JPanel jPanel55;
-  private javax.swing.JPanel jPanel6;
-  private javax.swing.JPanel jPanel7;
-  private javax.swing.JPanel jPanel8;
-  private javax.swing.JPanel jPanel9;
-  private javax.swing.JPasswordField jPasswordField1;
-  private javax.swing.JScrollPane jScrollPane1;
-  private javax.swing.JScrollPane jScrollPane2;
-  private javax.swing.JScrollPane jScrollPane3;
-  private javax.swing.JScrollPane jScrollPane4;
-  public javax.swing.JTabbedPane jTabbedPane1;
-  private javax.swing.JTabbedPane jTabbedPane2;
-  public javax.swing.JTextArea jTextArea1;
-  private javax.swing.JTextArea jTextArea2;
-  public javax.swing.JTextArea jTextArea3;
-  private javax.swing.JTextField jTextField2;
-  private javax.swing.JTextField jTextField4;
-  private javax.swing.JTextField jTextField5;
-  private javax.swing.JTextField jTextField7;
-  private javax.swing.JTextField jTextField8;
-  private javax.swing.JTextField jTextField9;
-  public javax.swing.JTextPane jTextPane1;
-  private javax.swing.JPanel moderatorPanel;
-  private javax.swing.JPanel msgPanel;
-  private javax.swing.JTabbedPane msg_TabbedPane;
-  private javax.swing.JButton msg_btnClear;
-  private javax.swing.JButton msg_btnMinus;
-  private javax.swing.JButton msg_btnPlus;
-  private javax.swing.JButton msg_btnSaveAs;
-  private javax.swing.JButton msg_btnSendClear;
-  private javax.swing.JButton msg_btnSendDraft;
-  private javax.swing.JButton msg_btn_sendMsg;
-  private javax.swing.JButton msg_button10;
-  private javax.swing.JButton msg_button7;
-  private javax.swing.JButton msg_button8;
-  private javax.swing.JButton msg_button9;
-  private javax.swing.JCheckBox msg_checkBox1;
-  private javax.swing.JPanel msg_draft_upperPanel;
-  private javax.swing.JLabel msg_label1;
-  private javax.swing.JLabel msg_label2;
-  private javax.swing.JPanel msg_lowerPanel;
-  private javax.swing.JPanel msg_panel1;
-  private javax.swing.JPanel msg_panel2;
-  private javax.swing.JPanel msg_panel5;
-  private javax.swing.JPanel msg_panel7;
-  private javax.swing.JScrollPane msg_scrollPane;
-  private javax.swing.JScrollPane msg_scrollPane2;
-  private javax.swing.JTextArea msg_textArea1;
-  private javax.swing.JTextField msg_textField1;
-  private javax.swing.JTextPane msg_textPane;
-  private javax.swing.JPanel msg_upperPanel;
-  public javax.swing.JRadioButton rb_srnControlAndImage;
-  public javax.swing.JRadioButton rb_srnMonitor;
-  public javax.swing.JPanel screenPanel;
-  private javax.swing.JPanel sk_upperPanel;
-  private javax.swing.JPanel sketchPanel;
-  private javax.swing.JPanel sld_upperPanel1;
-  private javax.swing.JPanel sld_upperPanel2;
-  private javax.swing.JPanel slidePanel;
-  private javax.swing.JScrollPane srn_scrollPane1;
-  public javax.swing.JPanel srn_upperPanel;
-  private javax.swing.JPanel statusPanel;
-  private javax.swing.JCheckBox status_checkBox1;
-  private javax.swing.JPanel status_upperPanel;
+    private javax.swing.JButton btnReload;
+    private javax.swing.JButton btn_fResetLayout1;
+    private javax.swing.JButton btn_fResetLayout2;
+    private javax.swing.JButton btn_fRoot1;
+    private javax.swing.JButton btn_fRoot2;
+    private javax.swing.JButton btn_openSld;
+    private javax.swing.JButton btn_srnACD;
+    private javax.swing.JButton btn_srnRefresh;
+    public javax.swing.JButton btn_srnStart;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup6;
+    private javax.swing.ButtonGroup buttonGroup7;
+    private javax.swing.ButtonGroup buttonGroup8;
+    private javax.swing.JCheckBox cbFileAu1;
+    private javax.swing.JCheckBox cbFileAu2;
+    private javax.swing.JCheckBox cbMsgAu1;
+    private javax.swing.JCheckBox cbMsgAu2;
+    private javax.swing.JCheckBox cbOpenWebAu;
+    private javax.swing.JCheckBox cbSketchAu1;
+    private javax.swing.JCheckBox cbSketchAu2;
+    private javax.swing.JCheckBox cbSlideAu1;
+    private javax.swing.JCheckBox cbSlideAu2;
+    private javax.swing.JCheckBox cbSrnAu1;
+    private javax.swing.JCheckBox cbSrnAu2;
+    public javax.swing.JCheckBox cb_srnFix;
+    public javax.swing.JComboBox cbb_fList1;
+    public javax.swing.JComboBox cbb_fList2;
+    private javax.swing.JComboBox cbb_fMlist;
+    private javax.swing.JComboBox cbb_moderatorElseList;
+    private javax.swing.JComboBox cbb_moderatorFList;
+    private javax.swing.JComboBox cbb_moderatorMsgList;
+    private javax.swing.JComboBox cbb_moderatorPermissionList;
+    private javax.swing.JComboBox cbb_moderatorSkList;
+    private javax.swing.JComboBox cbb_moderatorSldList;
+    private javax.swing.JComboBox cbb_moderatorSrnList;
+    private javax.swing.JComboBox cbb_moderatorStatusList;
+    private javax.swing.JComboBox cbb_msgMList;
+    private javax.swing.JComboBox cbb_skMList;
+    public javax.swing.JComboBox cbb_sldMList;
+    protected javax.swing.JComboBox cbb_slide;
+    private javax.swing.JComboBox cbb_slideInx;
+    public javax.swing.JComboBox cbb_srnMList;
+    private javax.swing.JButton clear;
+    private javax.swing.JCheckBox f_checkBox1;
+    private javax.swing.JLabel f_label1;
+    private javax.swing.JLabel f_label2;
+    private javax.swing.JPanel f_panel1;
+    private javax.swing.JPanel f_panel10;
+    private javax.swing.JPanel f_panel11;
+    private javax.swing.JPanel f_panel12;
+    private javax.swing.JPanel f_panel13;
+    private javax.swing.JPanel f_panel18;
+    private javax.swing.JPanel f_panel2;
+    private javax.swing.JPanel f_panel20;
+    private javax.swing.JPanel f_panel21;
+    private javax.swing.JPanel f_panel22;
+    private javax.swing.JPanel f_panel23;
+    private javax.swing.JPanel f_panel3;
+    private javax.swing.JPanel f_panel4;
+    private javax.swing.JPanel f_panel5;
+    private javax.swing.JPanel f_panel6;
+    private javax.swing.JPanel f_panel7;
+    private javax.swing.JScrollPane f_scrollPane6;
+    private javax.swing.JScrollPane f_scrollPane7;
+    private javax.swing.JTabbedPane f_tabbedPane1;
+    private javax.swing.JTable f_table1;
+    private javax.swing.JTable f_table2;
+    private javax.swing.JPanel filePanel;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton25;
+    private javax.swing.JButton jButton26;
+    private javax.swing.JButton jButton27;
+    private javax.swing.JButton jButton28;
+    private javax.swing.JButton jButton29;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton30;
+    private javax.swing.JButton jButton31;
+    private javax.swing.JButton jButton32;
+    private javax.swing.JButton jButton33;
+    private javax.swing.JButton jButton34;
+    private javax.swing.JButton jButton35;
+    private javax.swing.JButton jButton36;
+    private javax.swing.JButton jButton38;
+    private javax.swing.JButton jButton39;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton40;
+    private javax.swing.JButton jButton41;
+    private javax.swing.JButton jButton42;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox10;
+    private javax.swing.JCheckBox jCheckBox11;
+    private javax.swing.JCheckBox jCheckBox12;
+    private javax.swing.JCheckBox jCheckBox13;
+    private javax.swing.JCheckBox jCheckBox14;
+    private javax.swing.JCheckBox jCheckBox15;
+    private javax.swing.JCheckBox jCheckBox16;
+    private javax.swing.JCheckBox jCheckBox17;
+    private javax.swing.JCheckBox jCheckBox18;
+    private javax.swing.JCheckBox jCheckBox19;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox20;
+    private javax.swing.JCheckBox jCheckBox21;
+    private javax.swing.JCheckBox jCheckBox22;
+    private javax.swing.JCheckBox jCheckBox23;
+    private javax.swing.JCheckBox jCheckBox24;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBox5;
+    private javax.swing.JCheckBox jCheckBox6;
+    private javax.swing.JCheckBox jCheckBox7;
+    private javax.swing.JCheckBox jCheckBox8;
+    private javax.swing.JCheckBox jCheckBox9;
+    public javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBox2;
+    public javax.swing.JComboBox jComboBox3;
+    public javax.swing.JComboBox jComboBox4;
+    private javax.swing.JComboBox jComboBox7;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
+    private javax.swing.JMenuItem jMenuItem14;
+    private javax.swing.JMenuItem jMenuItem15;
+    private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem17;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel29;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel30;
+    private javax.swing.JPanel jPanel31;
+    private javax.swing.JPanel jPanel32;
+    private javax.swing.JPanel jPanel33;
+    private javax.swing.JPanel jPanel34;
+    private javax.swing.JPanel jPanel35;
+    private javax.swing.JPanel jPanel36;
+    private javax.swing.JPanel jPanel37;
+    private javax.swing.JPanel jPanel38;
+    private javax.swing.JPanel jPanel39;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel40;
+    private javax.swing.JPanel jPanel41;
+    private javax.swing.JPanel jPanel42;
+    private javax.swing.JPanel jPanel43;
+    private javax.swing.JPanel jPanel44;
+    private javax.swing.JPanel jPanel45;
+    private javax.swing.JPanel jPanel46;
+    private javax.swing.JPanel jPanel47;
+    private javax.swing.JPanel jPanel48;
+    private javax.swing.JPanel jPanel49;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel50;
+    private javax.swing.JPanel jPanel51;
+    private javax.swing.JPanel jPanel52;
+    private javax.swing.JPanel jPanel53;
+    private javax.swing.JPanel jPanel54;
+    private javax.swing.JPanel jPanel55;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    public javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    public javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    public javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
+    public javax.swing.JTextPane jTextPane1;
+    private javax.swing.JPanel moderatorPanel;
+    private javax.swing.JPanel msgPanel;
+    private javax.swing.JTabbedPane msg_TabbedPane;
+    private javax.swing.JButton msg_btnClear;
+    private javax.swing.JButton msg_btnMinus;
+    private javax.swing.JButton msg_btnPlus;
+    private javax.swing.JButton msg_btnSaveAs;
+    private javax.swing.JButton msg_btnSendClear;
+    private javax.swing.JButton msg_btnSendDraft;
+    private javax.swing.JButton msg_btn_sendMsg;
+    private javax.swing.JButton msg_button10;
+    private javax.swing.JButton msg_button7;
+    private javax.swing.JButton msg_button8;
+    private javax.swing.JButton msg_button9;
+    private javax.swing.JCheckBox msg_checkBox1;
+    private javax.swing.JPanel msg_draft_upperPanel;
+    private javax.swing.JLabel msg_label1;
+    private javax.swing.JLabel msg_label2;
+    private javax.swing.JPanel msg_lowerPanel;
+    private javax.swing.JPanel msg_panel1;
+    private javax.swing.JPanel msg_panel2;
+    private javax.swing.JPanel msg_panel5;
+    private javax.swing.JPanel msg_panel7;
+    private javax.swing.JScrollPane msg_scrollPane;
+    private javax.swing.JScrollPane msg_scrollPane2;
+    private javax.swing.JTextArea msg_textArea1;
+    private javax.swing.JTextField msg_textField1;
+    private javax.swing.JTextPane msg_textPane;
+    private javax.swing.JPanel msg_upperPanel;
+    public javax.swing.JRadioButton rb_srnControlAndImage;
+    public javax.swing.JRadioButton rb_srnMonitor;
+    public javax.swing.JPanel screenPanel;
+    private javax.swing.JPanel sk_upperPanel;
+    private javax.swing.JPanel sketchPanel;
+    private javax.swing.JPanel sld_upperPanel1;
+    private javax.swing.JPanel sld_upperPanel2;
+    private javax.swing.JPanel slidePanel;
+    private javax.swing.JScrollPane srn_scrollPane1;
+    public javax.swing.JPanel srn_upperPanel;
+    private javax.swing.JPanel statusPanel;
+    private javax.swing.JCheckBox status_checkBox1;
+    private javax.swing.JPanel status_upperPanel;
 
 }

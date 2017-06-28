@@ -644,5 +644,5 @@ public class CTRMAction2 implements GAction,Runnable{
   public String getHelp(){return "";}
 
 public void onExit(int type){};
-public void informVersion(int status,String version){}
+public void informVersion(String apId,int status,String version){}
 }
